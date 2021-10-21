@@ -49,7 +49,7 @@ The resulting crawl date, hardness and primary label distributions are as follow
 
 Original:
 
-![](images/2_crawled.png_crawled.png)
+![](images/2_crawled.png)
 
 After including primary labels:
 
