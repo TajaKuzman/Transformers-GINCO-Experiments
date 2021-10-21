@@ -36,4 +36,4 @@ After including primary labels:
 
 ![](images/1b_primaries.png)
 
-As we can see, the distribution of the primary labels has changed more with the 
+As we can see, the distribution of the primary labels has changed more with the inclusion of the primary label in the stratification algorithm. I therefore propose that further experiments be done with the first dataset created.
