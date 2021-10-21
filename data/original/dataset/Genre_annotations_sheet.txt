@@ -1,0 +1,1003 @@
+ID	Main category	Secondary category	Tertiary category	Hard
+3949	News/Reporting			
+3726	Information/Explanation			
+5621	Promotion of Services	Opinion/Argumentation	Information/Explanation	
+3776	News/Reporting			
+2102	Opinionated News			
+2816	Promotion of a Product	Review		
+6979	Invitation			
+5649	Legal/Regulation			
+3174	Invitation			
+3823	Promotion of a Product	Instruction		
+9257	News/Reporting			
+8887	Forum			
+645	Opinion/Argumentation			
+9961	Opinionated News			
+8116	Lyrical			
+9923	Announcement			
+3875	Opinion/Argumentation			
+3875#1	Forum			
+1926	Promotion of a Product	News/Reporting		
+1210	Promotion of a Product	Information/Explanation		
+7967	FAQ			
+1126	Opinion/Argumentation			
+1247	Opinionated News			
+8760	Instruction	Promotion of a Product		
+8684	Research Article			
+7186	News/Reporting			
+8795	Opinion/Argumentation	Instruction		
+1676	Opinionated News			
+1676#1	Forum			
+9847	Promotion of a Product	Opinion/Argumentation		
+2013	News/Reporting	Promotion of a Product		
+6695	Opinion/Argumentation	Promotion of Services		
+6183	Information/Explanation			
+9438	Information/Explanation	Promotion of a Product		
+1329	Opinionated News			
+1329#1	List of Summaries/Excerpts	Opinionated News		
+8678	Opinion/Argumentation			
+5430	Opinionated News			
+462	News/Reporting	Information/Explanation		
+6383	List of Summaries/Excerpts			
+5632	News/Reporting			
+2303	Invitation	News/Reporting		
+853	Instruction	Information/Explanation		
+3785	News/Reporting			
+4412	Information/Explanation	Opinion/Argumentation		
+9498	Opinion/Argumentation		Information/Explanation	
+4188	Opinionated News			
+9800	Legal/Regulation			
+2831	List of Summaries/Excerpts	News/Reporting		
+7984	Opinionated News			
+8694	Opinionated News			
+7189	Opinionated News			
+7393	Opinionated News			
+4750	Information/Explanation	Instruction		
+8556	Opinionated News			
+6729	Opinion/Argumentation			
+6729#1	Forum			
+746	Opinionated News			
+1524	News/Reporting			
+4136	List of Summaries/Excerpts	Opinionated News		
+6438	Promotion of Services		Information/Explanation	
+8773	Opinion/Argumentation			
+8773#1	Forum			
+1754	Correspondence			
+2983	Correspondence			
+2508	Information/Explanation		Promotion of Services	
+3655	List of Summaries/Excerpts	Review		
+9175	Information/Explanation		Opinion/Argumentation	
+9175#1	Correspondence			
+9175#2	Opinionated News			
+2107	List of Summaries/Excerpts			
+9891	Promotion			
+6405	List of Summaries/Excerpts			
+3453	Promotion of a Product			
+8176	Information/Explanation		Opinion/Argumentation	
+425	Instruction			
+3057	Promotion	Promotion of services		
+4586	List of Summaries/Excerpts		Promotion	
+1587	Opinion/Argumentation			
+2666	News/Reporting			
+5245	Information/Explanation			
+6766	Promotion of Services	Review		
+5512	Information/Explanation		Instruction	
+2663	Information/Explanation			
+7128	Information/Explanation			
+3356	Opinionated News			
+1457	Invitation			
+7980	Promotion of a Product			
+3326	Information/Explanation	Instruction		
+640	Promotion of a Product			
+1125	Promotion of a Product			
+5333	News/Reporting			
+6271	Invitation			
+6271#1	Opinion/Argumentation			
+9711	Opinionated News			
+179	Opinionated News			
+179#1	Lyrical			
+3978	List of Summaries/Excerpts			
+4134	News/Reporting			
+2408	Promotion of Services			
+8863	News/Reporting			
+6845	News/Reporting		Opinion/Argumentation	
+753	Information/Explanation			
+5204	Opinion/Argumentation			
+8688	Promotion of a Product			
+7264	News/Reporting			
+9253	Promotion of a Product			
+6202	News/Reporting			
+626	News/Reporting			
+820	Announcement			
+5004	Invitation			
+4974	Information/Explanation			
+3511	Opinionated News			
+7818	Information/Explanation			
+9194	Opinion/Argumentation			
+6888	Promotion	News/Reporting		H
+4709	Opinion/Argumentation			
+3933	Opinion/Argumentation			
+3933#1	Forum			
+137	Promotion of a Product			
+1196	Opinionated News			
+7958	News/Reporting			
+5594	News/Reporting			
+305	Information/Explanation			
+2257	Opinion/Argumentation			
+2257#1	Forum			
+3116	Opinion/Argumentation			
+8650	Promotion of a Product	Review		
+2939	News/Reporting		Opinion/Argumentation	
+3954	Promotion of a Product	News/Reporting		
+5491	Instruction			
+7119	Opinion/Argumentation			
+9808	Information/Explanation		Promotion	
+8195	Legal/Regulation			
+7157	Opinion/Argumentation	Information/Explanation		
+7694	Information/Explanation	Opinion/Argumentation		
+6339	Information/Explanation			
+3096	Opinion/Argumentation			
+9338	Promotion of a Product			
+9338#1	Recipe			
+5137	News/Reporting			
+6964	Opinionated News			
+8455	Instruction			
+8722	Invitation			
+4644	Information/Explanation			
+5852	Review			
+6694	News/Reporting			
+6710	Information/Explanation			
+6447	News/Reporting			
+5545	Information/Explanation			
+1330	Opinion/Argumentation			
+1330#1	Forum			
+329	Information/Explanation			
+2856	Promotion of a Product	Information/Explanation		
+6576	List of Summaries/Excerpts	Promotion of a Product		
+5100	Information/Explanation	Promotion		
+5127	Information/Explanation			
+4630	News/Reporting	Invitation		
+9322	Promotion of Services			
+2519	Prose			
+9454	News/Reporting			
+3086	List of Summaries/Excerpts			
+6575	Promotion of a Product	News/Reporting		
+2752	Information/Explanation			
+1243	Call			
+400	Information/Explanation			
+6913	Invitation	News/Reporting		
+5828	News/Reporting			
+334	Other			
+334#1	List of Summaries/Excerpts			
+3285	Information/Explanation			
+8700	List of Summaries/Excerpts	Information/Explanation		
+4954	Opinion/Argumentation			
+4954#1	Forum			
+2771	List of Summaries/Excerpts	Information/Explanation		
+9129	Instruction	Information/Explanation		
+9129#1	Information/Explanation			
+9129#2	Instruction	Information/Explanation		
+7635	Promotion			
+4935	Other			
+6036	Information/Explanation			
+1650	Review	Information/Explanation		
+5406	Opinionated News			
+7102	Legal/Regulation			
+6600	Invitation			
+2015	Review			
+3839	Interview			
+1521	Other			
+7611	Invitation			
+7611#1	Announcement			
+7611#2	Invitation			
+5169	Opinion/Argumentation			
+2639	List of Summaries/Excerpts			
+5122	News/Reporting			
+741	Promotion of a Product			
+9170	Promotion			
+3286	Instruction			
+9558	Invitation			
+6652	Promotion of a Product			
+2292	Promotion			
+1193	Opinionated News			
+502	Information/Explanation			
+3118	News/Reporting		Opinion/Argumentation	
+3076	Opinion/Argumentation			
+3076#1	Information/Explanation		Opinion/Argumentation	
+712	Promotion of a Product		Information/Explanation	
+1386	Promotion of a Product			
+6909	Opinion/Argumentation			
+2534	Promotion of a Product			
+4922	News/Reporting			
+2263	Promotion of Services			
+3828	Opinion/Argumentation		Information/Explanation	
+3828#1	Forum			
+5568	Opinion/Argumentation			
+3769	Opinionated News			
+7542	News/Reporting		Promotion	
+7410	Opinionated News	News/Reporting		
+8017	News/Reporting		Promotion	
+2573	Opinion/Argumentation		Information/Explanation	
+9373	News/Reporting			
+9373#1	Forum			
+8741	Opinion/Argumentation		Instruction	
+803	Promotion of Services			
+7165	Review			
+3027	Opinion/Argumentation			
+3404	Opinionated News			
+5295	Prose			
+6487	Promotion of a Product			
+2091	News/Reporting	Promotion of a Product		
+4838	Invitation			
+5818	Opinionated News			
+7993	Opinion/Argumentation			
+3467	List of Summaries/Excerpts			
+9617	Opinion/Argumentation			
+4888	Opinionated News			
+6449	Promotion of a Product			
+4834	News/Reporting		Opinion/Argumentation	
+352	News/Reporting			
+6615	Other	Opinionated News		
+8596	List of Summaries/Excerpts			
+4231	Invitation			
+4231#1	Announcement			
+4231#2	News/Reporting			
+3893	Information/Explanation			
+183	Promotion of Services			
+522	Call	News/Reporting		
+8262	List of Summaries/Excerpts	Prose		
+1520	List of Summaries/Excerpts			
+5817	Opinion/Argumentation	Instruction		
+364	News/Reporting			
+5149	Opinionated News			
+2467	Information/Explanation			
+5613	News/Reporting			
+1553	News/Reporting			
+3396	Promotion of Services			
+8138	Opinionated News			
+4585	Information/Explanation		Promotion of a Product	
+7728	List of Summaries/Excerpts			
+4310	Information/Explanation			
+2751	Research Article			
+4000	Information/Explanation			
+3284	Interview			H
+4898	Promotion of a Product		Information/Explanation	
+8966	Information/Explanation			
+4119	Forum			
+2373	Promotion of a Product			
+7310	List of Summaries/Excerpts			
+1375	Opinionated News			
+7646	Promotion of a Product			
+7013	Opinion/Argumentation			
+1543	News/Reporting	Promotion		
+1543#1	List of Summaries/Excerpts			
+730	Promotion of a Product			
+5068	Information/Explanation		Opinion/Argumentation	
+9549	Opinionated News			
+9356	Information/Explanation	Promotion		
+147	Information/Explanation	Opinion/Argumentation		
+207	Promotion of Services	Information/Explanation		
+1179	Opinion/Argumentation			
+6370	Opinion/Argumentation			
+8105	Opinionated News			
+7198	Opinionated News			
+6637	Promotion of Services		Instruction	
+4623	Promotion of a Product			
+495	Information/Explanation		Promotion of a Product	
+8646	Opinionated News			
+8834	List of Summaries/Excerpts	Opinion/Argumentation		
+8415	News/Reporting			
+4349	Correspondence			
+1689	Opinion/Argumentation			
+3189	Opinionated News			
+5368	Forum			
+5400	Opinion/Argumentation			
+9682	Opinion/Argumentation	Invitation		
+9682#1	Forum			
+9571	Promotion		Information/Explanation	
+4717	Information/Explanation			
+1100	Promotion of Services			
+5388	News/Reporting		Opinionated News	
+9718	Promotion of a Product	News/Reporting		
+7730	Recipe			
+1318	Information/Explanation	Promotion	News/Reporting	H
+633	Information/Explanation	Promotion		
+633#1	Instruction			
+4817	Invitation			H
+9247	Promotion			
+7112	List of Summaries/Excerpts			
+9084	Review			
+2147	Opinion/Argumentation			
+2147#1	Forum			
+5340	News/Reporting	Opinionated News		
+6176	News/Reporting			
+3186	Opinion/Argumentation			
+659	Correspondence	Opinion/Argumentation		
+304	Promotion of a Product	News/Reporting		
+2238	List of Summaries/Excerpts	News/Reporting		
+4120	Opinion/Argumentation			
+4120#1	Instruction			
+4120#2	Opinion/Argumentation			
+4120#3	Review			
+5057	Information/Explanation			
+3075	Announcement			
+3973	Promotion of a Product	Information/Explanation		
+8329	Opinionated News			
+10000	Forum			
+1831	Opinion/Argumentation			
+5630	News/Reporting			
+9902	List of Summaries/Excerpts		News/Reporting	
+3380	Information/Explanation			
+161	Opinion/Argumentation	Information/Explanation		
+161#1	Forum			
+161#2	Call			
+9026	Opinion/Argumentation			
+9882	Opinion/Argumentation			
+8221	Promotion of a Product	Information/Explanation		
+6612	Information/Explanation	Instruction		
+8299	Promotion of a Product	News/Reporting		
+2134	Recipe			
+2483	Instruction			H
+2887	Opinion/Argumentation			
+2887#1	News/Reporting			
+2887#2	Opinionated News			
+2887#3	Correspondence			
+2887#4	Correspondence			
+2887#5	List of Summaries/Excerpts	Opinionated News		
+2515	Instruction			
+7787	Promotion of a Product			
+9770	Research Article		Information/Explanation	
+3713	Prose	Opinion/Argumentation	Promotion of services	
+7716	Opinionated News			
+4116#1	Forum			
+1309	List of Summaries/Excerpts			
+2717	Opinion/Argumentation	Invitation		
+1261	Invitation		Information/Explanation	
+3842	Promotion of a Product		Information/Explanation	
+8236	Information/Explanation	News/Reporting		
+3287	Review			
+2741	Information/Explanation	Promotion		H
+9405	Invitation		Promotion	
+565	News/Reporting			
+9298	News/Reporting		Opinionated News	
+8814	News/Reporting			
+8814#1	List of Summaries/Excerpts	News/Reporting		
+1638	Opinion/Argumentation			
+8399	News/Reporting			
+401	Promotion of a Product			
+9913	Promotion of Services	Information/Explanation		
+9004	List of Summaries/Excerpts	News/Reporting		
+5556	Opinion/Argumentation			
+7263	List of Summaries/Excerpts	News/Reporting		
+3518	News/Reporting			
+2821	Other			
+7272	News/Reporting			
+1305	Opinion/Argumentation			
+515	Opinion/Argumentation			
+515#1	Forum			
+5399	Promotion of Services			
+5399#1	List of Summaries/Excerpts	Promotion of services		
+1872	Script/Drama			
+1872#1	Information/Explanation		Opinion/Argumentation	
+5335	Opinionated News			
+7418	News/Reporting			
+6043	Information/Explanation		Opinion/Argumentation	
+7620	Information/Explanation			
+8748	Promotion of a Product			
+7672	Promotion of a Product	Information/Explanation		
+4628	Information/Explanation	Promotion	Promotion of a Product	
+6528	Interview			
+2065	Opinion/Argumentation			
+818	Information/Explanation		Call	
+7133	Legal/Regulation			
+3961	News/Reporting			
+1003	Promotion of a Product	Promotion of services		
+1191	Announcement			
+133	News/Reporting	Call	Promotion	
+2145	News/Reporting			
+3908	List of Summaries/Excerpts	News/Reporting		
+9969	Opinion/Argumentation			
+4695	News/Reporting			
+5963	News/Reporting	Promotion of a Product		
+1428	Opinion/Argumentation			
+1428#1	Prose			
+7766	Information/Explanation			
+6506	News/Reporting			
+2170	Review			
+3500	List of Summaries/Excerpts	Opinion/Argumentation		
+143	Call		Promotion of services	
+195	Promotion of Services			
+9846	Opinionated News			
+9932	List of Summaries/Excerpts	News/Reporting		
+4625	Opinion/Argumentation			
+249	Opinion/Argumentation	Information/Explanation		
+7821	News/Reporting		Information/Explanation	H
+7520	List of Summaries/Excerpts	Opinionated News		
+7124	News/Reporting		Opinion/Argumentation	
+5998	Information/Explanation			
+7761	Opinion/Argumentation	Information/Explanation		
+9773	Opinionated News			
+6244	Promotion of Services			
+7431	Other			
+7431#1	Forum			
+7406	Opinionated News			
+10	Announcement			H
+3436	Information/Explanation			
+9824	Opinion/Argumentation			
+6581	Opinion/Argumentation	Instruction		
+1804	List of Summaries/Excerpts	News/Reporting		
+8248	News/Reporting			
+3706	Opinion/Argumentation			
+3706#1	Forum			
+732	Announcement			
+4257	Information/Explanation			
+9002	Instruction	Promotion	Promotion of a Product	
+9002#1	Forum			
+8022	Promotion of a Product		Information/Explanation	
+72	Opinion/Argumentation			
+72#1	Promotion	Promotion of services		
+3848	List of Summaries/Excerpts	News/Reporting		
+9054	Research Article			
+2484	Information/Explanation	Promotion		H
+8886	Opinionated News			
+1260	Invitation			
+193	List of Summaries/Excerpts	Opinionated News		
+8472	Opinion/Argumentation	Information/Explanation		
+2832	Instruction			
+604	Information/Explanation	Opinion/Argumentation		
+3236	Opinionated News			
+2848	Promotion of Services			
+2885	Information/Explanation			
+9387	List of Summaries/Excerpts			
+6860	Correspondence			
+5479	Opinionated News			
+2441	Opinion/Argumentation			
+2441#1	Forum			
+6660	Opinionated News	Opinion/Argumentation		
+6660#1	Information/Explanation			
+6660#2	List of Summaries/Excerpts	Opinion/Argumentation		
+5854#1	Forum			
+3883	Promotion of a Product	News/Reporting		
+9974	Opinionated News			
+4766	Invitation			
+3766	Correspondence			
+2536	Opinion/Argumentation	Information/Explanation		
+8052	Promotion of Services			
+2601	Promotion of a Product			
+809	Legal/Regulation			
+1053	Information/Explanation			
+5017	Promotion of a Product			
+899	Invitation			H
+7530	Correspondence			
+3947	News/Reporting			H
+7395	List of Summaries/Excerpts			
+6561	Opinion/Argumentation	Information/Explanation		
+9837	News/Reporting		Information/Explanation	
+6536	Opinionated News			
+9228	Information/Explanation			
+322	Promotion		Information/Explanation	
+5911	News/Reporting			
+2454	Promotion		Information/Explanation	H
+1740	Promotion of a Product			
+8976	Opinion/Argumentation			
+7934	News/Reporting		Promotion	
+5574	Correspondence			
+735	Interview			H
+226	Information/Explanation	Promotion		
+4639	Instruction	Opinion/Argumentation		
+237#1	Invitation			
+6135	Instruction			
+6135#1	Promotion of Services			
+3270	Legal/Regulation			
+2981	Legal/Regulation	Information/Explanation		
+6208	News/Reporting			
+5626	Research Article			
+5626#1	Research Article			
+5626#2	Research Article			
+1785	Call			
+453	Information/Explanation	Instruction		H
+6653	Legal/Regulation			
+6653#1	Instruction			
+8846	Review			
+6274	Opinionated News			
+611853	Promotion of a Product	List of Summaries/Excerpts		
+1411077	Promotion of a Product			
+2311951	Promotion	Information/Explanation		H
+4308309	List of Summaries/Excerpts	Promotion	Promotion of a Product	
+5309277	List of Summaries/Excerpts			
+5309277#1	Promotion of a Product	News/Reporting		
+6313066	Forum		Correspondence	
+7411459	Announcement	Information/Explanation	Invitation	
+8511744	List of Summaries/Excerpts	News/Reporting		
+9612796	Instruction			
+9612796#1	Forum			
+10809241	Promotion of a Product		Information/Explanation	
+13112006	List of Summaries/Excerpts			
+14312049	Forum			
+17610844	Opinion/Argumentation	Information/Explanation		
+19010679	Promotion of a Product			
+21012593	Invitation			
+22412226	News/Reporting			
+22412226#1	Other			
+26209525	List of Summaries/Excerpts	Promotion of a Product		
+29112121	News/Reporting	Promotion		
+33611519	Promotion of a Product			
+4761162	List of Summaries/Excerpts	Opinion/Argumentation		H
+5859615	List of Summaries/Excerpts	Promotion		
+7459701	News/Reporting			
+8560420	Promotion of a Product		Information/Explanation	
+8560420#1	Instruction			
+9662263	Information/Explanation			
+14358870	Promotion	Promotion of a Product		
+22461198	Legal/Regulation			
+23958443	Promotion of a Product			
+27759818	Instruction	Opinion/Argumentation		
+29961789	Announcement			
+268042	Promotion of Services	Information/Explanation		
+1063812	List of Summaries/Excerpts			
+2766676	Instruction			
+3765139	Call	Promotion		H
+4764206	Other			
+6867027	Promotion of a Product			
+6867027#1	Instruction			
+6867027#2	Recipe			
+7967414	Opinionated News	List of Summaries/Excerpts		
+11366916	Promotion of a Product			
+14963524	News/Reporting	Promotion		
+16263891	Promotion of a Product		Information/Explanation	
+17663984	Correspondence			H
+17663984#1	Opinion/Argumentation			
+17663984#2	Opinionated News			
+17663984#3	Opinionated News			
+17663984#4	Opinionated News			
+17663984#5	News/Reporting	Opinionated News		
+17663984#6	Correspondence			H
+17663984#7	Opinion/Argumentation	Opinionated News		
+17663984#8	Opinionated News			
+17663984#9	Opinion/Argumentation			
+18967853	Promotion of a Product	Opinion/Argumentation		
+22463813	List of Summaries/Excerpts	Opinion/Argumentation		
+23865756	Other			
+573064	Information/Explanation			
+3269726	News/Reporting			
+4173023	Information/Explanation	Promotion of a Product		H
+5268583	List of Summaries/Excerpts			
+10270045	Opinionated News			
+12570134	Forum			H
+14970387	Promotion of a Product			
+14970387#1	Instruction			
+18972530	Invitation			
+26969739	Invitation			
+28468373	Opinion/Argumentation			
+29872542	Research Article			
+32169802	Lyrical			
+373851	Promotion of a Product			
+1075042	Promotion of a Product			
+4776535	Opinionated News			
+12577726	Opinionated News	Promotion		H
+13776580	Opinionated News			
+16375642	Review	Opinionated News		
+17775238	Legal/Regulation			
+33776072	Review	Information/Explanation		H
+979486	Instruction			
+1780870	Review			
+3678651	Invitation			
+4678442	Opinionated News			
+16778318	List of Summaries/Excerpts		Review	
+18082795	Opinion/Argumentation			
+18082795#1	Interview	Promotion		H
+22181207	Promotion of a Product		Information/Explanation	
+23581107	Other			
+29580909	Invitation		Call	
+33379726	Promotion of a Product		Information/Explanation	
+1284152	Promotion	Promotion of Services		
+2183299	Opinion/Argumentation			
+4083855	Announcement			
+13484786	Promotion of a Product			
+15287426	Promotion of a Product			
+15287426#1	Instruction			
+18083586	List of Summaries/Excerpts	News/Reporting	Opinionated News	
+26685040	List of Summaries/Excerpts	News/Reporting		
+31183303	Invitation		Information/Explanation	H
+32684587	Review			
+192778	Information/Explanation		Promotion	
+988331	Opinion/Argumentation			
+1789768	Promotion of Services	Information/Explanation		H
+1789768#1	Opinion/Argumentation	Information/Explanation	Instruction	
+1789768#2	Promotion			H
+4689339	Information/Explanation	Opinion/Argumentation		
+5691882	Information/Explanation	Promotion of a Product		
+5691882#1	Instruction			
+7892037	Opinion/Argumentation			
+10692466	Information/Explanation			
+19590317	Opinion/Argumentation	Instruction		
+20892584	Other			
+20892584#1	Forum			
+28992941	Legal/Regulation			
+194396	Promotion of Services	Information/Explanation		
+10094463	Opinion/Argumentation			
+12393994	Promotion of a Product			
+17997851	Information/Explanation		News/Reporting	
+20095331	Other			
+21494970	Forum			
+25097371	Other			
+32693870	Opinion/Argumentation			
+3299342	News/Reporting			
+5299658	Other			
+6398789	Opinionated News			
+11399860	News/Reporting			
+20302774	Promotion of a Product		Information/Explanation	
+29102316	News/Reporting			
+31398876	Opinionated News	Promotion		
+707731	Information/Explanation		Promotion	
+1507615	Promotion			
+3405888	Other			
+8703421	Opinionated News			
+11504992	Opinionated News			
+12703498	Promotion of a Product			
+914784	Information/Explanation		Promotion of a Product	
+4615388	Promotion	Promotion of Services	Information/Explanation	H
+8915039	News/Reporting			
+13517215	News/Reporting	List of Summaries/Excerpts		H
+14717164	Promotion of a Product		News/Reporting	
+27515318	List of Summaries/Excerpts			
+33417775	List of Summaries/Excerpts	Opinionated news		
+4520734	Opinionated News			
+6622031	List of Summaries/Excerpts	Information/Explanation		
+12222944	Opinion/Argumentation	Information/Explanation		
+12222944#1	Information/Explanation	Opinion/Argumentation		
+23520334	Opinion/Argumentation			
+23520334#1	Correspondence	Opinion/Argumentation		
+25022533	News/Reporting			
+30318560	Other			
+34120808	Opinion/Argumentation	Information/Explanation	List of Summaries/Excerpts	
+425762	Information/Explanation			
+1127818	Promotion of Services			
+3023229	Lyrical			
+3926140	List of Summaries/Excerpts	Promotion of a Product		
+3926140#1	Promotion of a Product			
+6023952	Opinion/Argumentation		Information/Explanation	
+6023952#1	Instruction			
+7028162	Information/Explanation	Instruction		
+21825284	Information/Explanation		Promotion of a Product	
+4431924	Opinion/Argumentation		Information/Explanation	
+4431924#1	Promotion of Services		Information/Explanation	H
+4431924#2	Opinion/Argumentation	Review		
+9929327	Promotion	News/Reporting		
+17131072	Promotion			
+23331578	List of Summaries/Excerpts			
+26431651	Promotion of Services			
+3535087	Information/Explanation			
+8835319	Instruction	Opinion/Argumentation		
+15236636	Promotion of a Product			
+20033626	Promotion of a Product	Information/Explanation		
+28835009	Legal/Regulation			
+4042549	Information/Explanation	List of Summaries/Excerpts		
+8840767	Opinion/Argumentation		News/Reporting	
+7847031	Information/Explanation	Instruction		
+12946866	Opinion/Argumentation		Information/Explanation	
+12946866#1	List of Summaries/Excerpts		News/Reporting	
+19445399	List of Summaries/Excerpts	Promotion of a Product		
+22945841	Opinion/Argumentation			
+1349771	Promotion of a Product		Opinion/Argumentation	
+8352179	Interview			
+9549163	Information/Explanation		Promotion of a Product	
+28949275	News/Reporting			
+30351285	News/Reporting		Promotion	
+2654150	Opinionated News			
+6657054	News/Reporting			
+10054136	Information/Explanation	Instruction		H
+11155039	List of Summaries/Excerpts			
+17355105	List of Summaries/Excerpts		Promotion	
+20756308	News/Reporting			
+23555836	Legal/Regulation			
+32653269	Promotion of a Product			
+110084	Other			
+212626	Information/Explanation		Opinion/Argumentation	
+212626#1	Instruction		Information/Explanation	
+409851	Opinion/Argumentation	Opinionated News		
+512034	Promotion of a Product		Information/Explanation	
+812679	Promotion	Promotion of a Product	Information/Explanation	H
+1010651	Information/Explanation		Promotion of Services	
+1313104	Information/Explanation		Opinion/Argumentation	
+1911809	News/Reporting	Promotion		
+2111810	Correspondence			H
+2111810#1	Forum			
+2511640	Promotion of a Product			
+2912500	Opinion/Argumentation			
+2912500#1	Other			
+3112805	Promotion of a Product			
+3512864	Promotion of Services			
+3512864#1	List of Summaries/Excerpts	Promotion of a Product		
+3808380	News/Reporting			
+4008994	Information/Explanation		Promotion of Services	
+4209661	Opinion/Argumentation	Promotion of a Product		
+4410410	List of Summaries/Excerpts	Promotion of a Product		H
+4611231	Recipe			
+4811693	Information/Explanation			
+5013053	Forum			
+5510393	News/Reporting			
+5510393#1	Opinionated News			
+5711728	Opinionated News			
+6210068	Promotion of a Product			
+6411616	Promotion of a Product			
+6411616#1	Review			
+6411616#2	FAQ		Promotion of Services	
+6909741	News/Reporting			
+7111370	Promotion of Services	News/Reporting		
+7312744	Forum			
+7609298	List of Summaries/Excerpts	Promotion		
+7810976	Forum			
+8012538	Promotion of Services	Information/Explanation		
+8309722	Invitation		Call	
+8808636	Promotion of a Product			
+9509733	News/Reporting		Invitation	
+10008971	Promotion of a Product			
+10211489	Invitation		Promotion	H
+10912375	Promotion of a Product			
+10912375#1	Promotion of Services			
+11209963	Other			
+11412445	Information/Explanation			
+12710795	Promotion of a Product			
+13712105	Other			
+14009823	Other			H
+14510793	Promotion of a Product	News/Reporting		
+15012556	Information/Explanation		Opinion/Argumentation	
+15910322	Forum			H
+16209486	Forum			
+16413006	Information/Explanation	Promotion of a Product	Instruction	H
+17011201	Information/Explanation		Opinion/Argumentation	H
+17011201#1	Instruction		Information/Explanation	
+17011201#2	Promotion	Opinion/Argumentation	Promotion of Services	H
+17910889	Promotion of Services		Information/Explanation	
+19709849	List of Summaries/Excerpts	Legal/Regulation		H
+20212172	Opinion/Argumentation		Information/Explanation	
+20812856	Research Article			
+21112233	Information/Explanation			
+21412349	Information/Explanation			
+21712314	Instruction			
+22011899	List of Summaries/Excerpts		Invitation	
+23511225	Opinionated News		Promotion	H
+24208612	List of Summaries/Excerpts	Recipe		
+25112704	Information/Explanation		Promotion of a Product	
+27508776#1	Interview			
+27809883	Promotion of a Product			
+29011802	News/Reporting	Instruction		
+30008241	Promotion of a Product			
+30309259	Legal/Regulation			
+31308381	Opinionated News			
+32511426	Promotion of a Product		Information/Explanation	
+32813037	Opinionated News			
+33812719	Forum			
+34512959	Promotion of a Product		Information/Explanation	H
+35308632	Promotion of a Product			
+35308632#1	Instruction			
+35611279	News/Reporting		Opinionated News	
+36010361	Other			
+36010361#1	Review			H
+36708864	Information/Explanation	Promotion of a Product		
+37408347	List of Summaries/Excerpts	Opinion/Argumentation	Review	
+38109693	Instruction			
+40909550	News/Reporting			
+41612921	News/Reporting	List of Summaries/Excerpts		
+42413111	Information/Explanation	News/Reporting	Opinion/Argumentation	H
+363124	Correspondence			
+363124#1	Information/Explanation	Legal/Regulation		
+560379	Announcement		Invitation	
+860704	Promotion of a Product		Information/Explanation	
+1058881	Opinion/Argumentation			
+1058881#1	Information/Explanation		News/Reporting	
+1058881#2	News/Reporting	Opinion/Argumentation		
+1360964	List of Summaries/Excerpts		Opinionated news	
+1560206	Promotion of a Product		Information/Explanation	
+1759390	List of Summaries/Excerpts		Opinionated news	
+1959444	Announcement			
+2159456	Information/Explanation			
+2359160	Promotion of a Product			
+2558826	Information/Explanation			
+2758961	Opinionated News	Promotion		
+3159864	Interview			H
+3759844	Call		Instruction	
+3960250	News/Reporting		Information/Explanation	
+3960250#1	Forum			
+4161143	Review	News/Reporting		H
+4161143#1	Opinionated News			
+4361969	Other			
+4562558	Call	Promotion		H
+4858235	Promotion of a Product			
+5059474	Information/Explanation	Instruction	Promotion	H
+5462551	Invitation			
+5759313	Promotion of a Product		Information/Explanation	
+5960633	List of Summaries/Excerpts			
+6162129	Invitation			
+6659632	Opinionated News			
+6861132	News/Reporting			H
+7062789	Opinion/Argumentation			
+7062789#1	List of Summaries/Excerpts	Opinion/Argumentation		
+7062789#2	Forum			
+7359114	News/Reporting		Opinion/Argumentation	
+8059395	Opinionated News			
+8261246	List of Summaries/Excerpts		Invitation	
+10258842	List of Summaries/Excerpts	Promotion	News/Reporting	
+10460852	Information/Explanation			
+11162413	List of Summaries/Excerpts	News/Reporting		H
+11459774	Promotion of a Product	Information/Explanation		H
+11662122	Promotion of a Product	Information/Explanation		
+12459181	Forum			
+12661859	List of Summaries/Excerpts			
+12959451	Forum			
+13162508	Promotion of a Product			
+13459906	Other			
+13662456	Information/Explanation		Promotion of a Product	
+14759353	Opinion/Argumentation			
+15560099	Opinion/Argumentation	Information/Explanation		
+15859383	Opinionated News			
+18762293#1	Other			
+18762293#2	Promotion of Services			
+20559101	List of Summaries/Excerpts	Research article		
+20858778	Information/Explanation	Promotion of a Product		
+21458326	Information/Explanation	Legal/Regulation		
+21663018	Information/Explanation	Promotion of a Product		
+22058408	Opinion/Argumentation		Information/Explanation	
+22058408#1	Opinionated News	Promotion		
+22359014	List of Summaries/Excerpts		Promotion of a Product	
+22959476	Opinion/Argumentation	Opinionated News		H
+24559017	Opinion/Argumentation		Promotion	
+25462693	Other	List of Summaries/Excerpts		
+26558358	List of Summaries/Excerpts	News/Reporting		
+26860026	List of Summaries/Excerpts			
+27161077	Promotion of a Product			
+27462070	Forum	Review		
+27462070#1	Information/Explanation			
+27858242	Forum			H
+28761597	Forum			
+29062308	Information/Explanation	Opinion/Argumentation		
+29759349	Opinionated News			
+30059720#1	Review			
+30359743	News/Reporting	Opinionated News		
+31359374	Opinion/Argumentation			H
+31660641	News/Reporting		Opinion/Argumentation	
+31962153	Other			
+32262994	Opinion/Argumentation	Information/Explanation		
+32660171	Promotion of a Product		List of Summaries/Excerpts	
+33658981	Promotion of a Product			
+34262196	Forum			
+34660139	Information/Explanation	Promotion		H
+36459966	List of Summaries/Excerpts	Other		
+36761749	Forum			H
+167013#1	List of Summaries/Excerpts	Promotion of a Product		
+364244	Promotion			
+766587	Opinion/Argumentation			
+964685	Instruction	Information/Explanation		H
+1067739	Promotion	Information/Explanation	Promotion of a Product	
+1864370	News/Reporting	Opinionated News		
+2064015	Other			
+2264008	Promotion of a Product			
+2463310	Opinion/Argumentation	Information/Explanation	Promotion	H
+2567671	Promotion of a Product			
+3063840	Information/Explanation			
+4266533	Opinionated News			
+4467170	Opinionated News			
+5865336	Promotion of a Product			
+6066999	News/Reporting			
+7265007	News/Reporting			
+7466881	Information/Explanation			
+7763717	Promotion of a Product			
+8464647	Call		Information/Explanation	
+8963663	Opinion/Argumentation	Information/Explanation	Promotion of a Product	H
+9665535	Information/Explanation	Promotion of a Product		
+10567791	Promotion of a Product	Information/Explanation		H
+11566955	Promotion of a Product			
+11566955#1	Information/Explanation		Opinion/Argumentation	
+11566955#2	Information/Explanation	Instruction	Promotion	
+12864150	Forum	Review		
+13364639	Promotion of a Product			
+13566717	Other			H
+13863746	Prose		Opinion/Argumentation	
+14066316	Information/Explanation	Call		
+14866068	Promotion of a Product			
+15667780	Opinionated News	News/Reporting		
+17766566	News/Reporting			
+18365911	Information/Explanation	Promotion	Promotion of a Product	
+18965455	Promotion of Services			
+19864373	List of Summaries/Excerpts	Opinion/Argumentation		
+20067901	Forum			
+20666914	Opinionated News			
+22766520	List of Summaries/Excerpts		Opinionated News	
+23067254	List of Summaries/Excerpts	Opinionated news		
+24365631	Opinionated News			
+24667468	Prose			
+25364651	List of Summaries/Excerpts	Promotion of a Product		
+25665713	Call		Information/Explanation	
+27363653#1	Instruction			
+29263584	List of Summaries/Excerpts	Promotion of a Product		
+29865729	Promotion	Call		
+30165669	Opinionated News	Promotion		
+30467090	Opinion/Argumentation			
+32767713	News/Reporting			
+33766990	Information/Explanation			
+34465867	List of Summaries/Excerpts			
+35563441	List of Summaries/Excerpts		News/Reporting	
+35866681	Information/Explanation	News/Reporting		H
+36264271	Forum			
+36566082	Promotion of a Product	Information/Explanation		
+37663396	Legal/Regulation			H
+38765987	Opinion/Argumentation	Information/Explanation		
+39565756	Information/Explanation			
+39966342	Promotion of a Product			
+40765569	Opinionated News			
+41965345	Opinion/Argumentation			
+471406	Promotion of a Product			
+771804	Information/Explanation	Promotion of a Product		
+771804#1	Recipe			
+1072843	Instruction		Opinion/Argumentation	
+1271745	Opinion/Argumentation	Review		
+1271745#1	Information/Explanation			
+1869667	Opinion/Argumentation	Information/Explanation	Promotion	
+3070413	FAQ		Information/Explanation	H
+3270546	News/Reporting	Opinionated News		
+3270546#1	List of Summaries/Excerpts			
+3670781	Other			
+4272524	Promotion of a Product			
+4969323	Forum			
+5170658	List of Summaries/Excerpts			
+6072833	List of Summaries/Excerpts			
+6072833#2	List of Summaries/Excerpts		Opinionated News	
+6072833#3	Announcement			
+6570692	Opinionated News			
+7069544	Other			
+7271559	News/Reporting		Information/Explanation	
+7972644	Opinion/Argumentation			
+8269465	News/Reporting			
+8472041	Promotion	Promotion of a product		
+8971889	Announcement	Promotion of services		H
+9269106	News/Reporting		Promotion	
+9269106#1	Promotion	Information/Explanation	Promotion of a product	
+10171917	Call			
+10671237	List of Summaries/Excerpts			
+11372613	Promotion		Information/Explanation	H
+12170252	Legal/Regulation			
+13468354	Promotion of a Product	Information/Explanation		
+15270073	News/Reporting	Opinionated News		
+16071926	Information/Explanation			
+16370824	Announcement	Invitation		
+17871072	News/Reporting		List of Summaries/Excerpts	
+18769122	Promotion	News/Reporting	Promotion of a product	H
+19272986	Other			
+19871313	News/Reporting	Information/Explanation		
+19871313#1	Opinionated News			
+19871313#2	News/Reporting		Promotion of a Product	
+19871313#3	Opinionated News			
+19871313#4	Opinionated News			
+21069529	Instruction		Promotion of a Product	
+22569254	News/Reporting	Information/Explanation		
+23770022	Other			
+24071055	List of Summaries/Excerpts			
+24468289	News/Reporting			
+24468289#1	Opinionated News	List of Summaries/Excerpts		
+24769936	Forum			
+25371784	Invitation			
+26071580	Promotion of a Product	Information/Explanation		
+26770095	Promotion of a Product			
+27071386	Other			
+27672639	Information/Explanation			
+28670057	Promotion		Information/Explanation	
+30570526	Information/Explanation	Promotion		
+31268416	Forum			
+32472742	List of Summaries/Excerpts			
+32869156	News/Reporting			
+33868957	Opinion/Argumentation	Information/Explanation		
+33868957#1	List of Summaries/Excerpts	Opinion/Argumentation		
+34869825	List of Summaries/Excerpts		News/Reporting	
+35970091	News/Reporting		Promotion	
+36272232	Promotion	Information/Explanation		
+36272232#1	Instruction			
+37671829	Promotion of a Product	Information/Explanation		
+41172888	List of Summaries/Excerpts			
+41972165	Announcement			
+177483	List of Summaries/Excerpts	Promotion		
+374730	Information/Explanation		Promotion of a Product	
+476885	List of Summaries/Excerpts	Promotion		
+674213	List of Summaries/Excerpts	Promotion of a Product		
+975590	Opinion/Argumentation			
+1277644	List of Summaries/Excerpts	Invitation		H
