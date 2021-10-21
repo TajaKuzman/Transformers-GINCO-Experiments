@@ -37,3 +37,40 @@ After including primary labels:
 ![](images/1b_primaries.png)
 
 As we can see, the distribution of the primary labels has changed more with the inclusion of the primary label in the stratification algorithm. I therefore propose that further experiments be done with the first dataset created.
+
+
+# Downsampling corrections:
+
+Label downsampling has previously been done incorectly, as only the first dictionary is to be included at this point. This has been corrected, but the resulting data is still preserved.
+
+The resulting crawl date, hardness and primary label distributions are as follows:
+
+### Crawl date:
+
+Original:
+
+![](images/2_crawled.png_crawled.png)
+
+After including primary labels:
+
+![](images/2b_crawled.png)
+
+### Hardness:
+
+Original: 
+
+![](images/2_hardness.png)
+
+After including primary labels:
+
+![](images/2b_hardness.png)
+
+### Primary labels:
+
+Original:
+
+![](images/2_primaries.png)
+
+After including primary labels:
+
+![](images/2b_primaries.png)
