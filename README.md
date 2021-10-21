@@ -74,3 +74,13 @@ Original:
 After including primary labels:
 
 ![](images/2b_primaries.png)
+
+# Filename tracking
+
+|filename|description|origin for|
+|---|---|---|
+|tabular.csv|first attempt with incorrect downsampling|dev.csv, train.csv, test.csv|
+|tabular_1a.csv|incorrect downsampling, added year, primary and hardness to stratification, didn't work|dev_1a.csv, train_1a.csv, test_1a.csv|
+|tabular_1b.csv|incorrect downsampling, added year and primary to stratification,works|dev_1b.csv, train_1b.csv, test_1b.csv|
+|tabular_2.csv|correct downsampling|dev_2.csv, train_2.csv, test_2.csv|
+|tabular_2b.csv|correct downsampling, stratification on year and primary|dev_2b.csv, train_2b.csv, test_2b.csv|
