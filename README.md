@@ -75,6 +75,8 @@ After including primary labels:
 
 ![](images/2b_primaries.png)
 
+In the next iteration I discarded the idea of correcting domain-based data leakage between dev and test splits to try and improve the primary label distributions between splits.
+
 # Filename tracking
 
 |filename|description|origin for|
