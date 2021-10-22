@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Binaries
+*.bin
 # C extensions
 *.so
 
@@ -12,6 +14,7 @@ __pycache__/
 *runs*
 *wandb*
 *finetuned_models*
+
 # Distribution / packaging
 .Python
 build/
