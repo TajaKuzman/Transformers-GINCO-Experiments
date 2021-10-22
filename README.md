@@ -75,7 +75,11 @@ After including primary labels:
 
 ![](images/2b_primaries.png)
 
-In the next iteration I discarded the idea of correcting domain-based data leakage between dev and test splits to try and improve the primary label distributions between splits.
+In the next iteration I discarded the idea of correcting domain-based data leakage between dev and test splits to try and improve the primary label distributions between splits. The final iteration looks like this:
+
+![](images/2c_primaries.png)
+
+
 
 # Filename tracking
 
@@ -86,3 +90,4 @@ In the next iteration I discarded the idea of correcting domain-based data leaka
 |tabular_1b.csv|incorrect downsampling, added year and primary to stratification,works|dev_1b.csv, train_1b.csv, test_1b.csv|
 |tabular_2.csv|correct downsampling|dev_2.csv, train_2.csv, test_2.csv|
 |tabular_2b.csv|correct downsampling, stratification on year and primary|dev_2b.csv, train_2b.csv, test_2b.csv|
+|tabular_2c.csv|correct downsampling, stratification on primary|dev_2c.csv, train_2c.csv, test_2c.csv|
