@@ -1,5 +1,23 @@
 # First experiment
 
+## Result summary
+
+### micro F1 metrics
+
+|trained on \ evaluated on |full dataset| restricted dataset|
+|---|---|---|
+|full dataset |0.4162 |0.4277 | 
+|restricted dataset |0.3699 |0.3626 |
+
+### macro F1 metrics
+
+|trained on \ evaluated on |full dataset| restricted dataset|
+|---|---|---|
+|full dataset |0.2949 | 0.2966|
+|restricted dataset |0.2512 |0.2664 |
+
+## Methodology 
+
 Once the data has been prepared, I started by training the first models. As of now I am comparing the performances in two scenarios: 
 
 * with all the data kept and 
@@ -21,4 +39,14 @@ While the restricted dataset looks like this:
 
 ![](images/experiment1_onlykeep.png)
 
+
+For now it seems that in this symmetric experiment the unrestricted dataset performs better than the restricted dataset. I shall now try and cross these models over, to see if the performance improves.
+
+If the model is trained on full dataset and then evaluated on restricted dataset, the confusion matrix and metrics look like this:
+
+![](images/experiment1_train_on_all_evaluate_on_subset.png)
+
+And mutatis mutandis:
+
+![](images/experiment1_train_on_subset_evaluate_on_all.png)
 
