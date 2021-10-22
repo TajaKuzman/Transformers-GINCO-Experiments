@@ -10,6 +10,7 @@ In this scenario we do not care about label distributions. For now only the prim
 The data was trained with fasttext method `train_supervised` with the dev section provided as the `autotuneValidationFile` and training was capped at 600 seconds.
 
 Two models were trained, one for data with keep==True and one for data with complete disregard for keep parameter.
+Micro and macro F1 scores are plotted in the confusion matrix plot title to assure traceability, advise if change of format is required.
 
 With all the data I plotted this confusion matrix:
 
@@ -17,7 +18,7 @@ With all the data I plotted this confusion matrix:
 
 
 While the restricted dataset looks like this:
-****
+
 ![](images/experiment1_onlykeep.png)
 
 
