@@ -27,7 +27,7 @@ In this scenario we do not care about label distributions. For now only the prim
 
 The data was trained with fasttext method `train_supervised` with the dev section provided as the `autotuneValidationFile` and training was capped at 600 seconds.
 
-Two models were trained, one for data with keep==True and one for data with complete disregard for keep parameter.
+Two models were trained, one for data with `keep==True` and one for data with complete disregard for keep parameter.
 Micro and macro F1 scores are plotted in the confusion matrix plot title to assure traceability, advise if change of format is required.
 
 With all the data I plotted this confusion matrix:
@@ -46,7 +46,11 @@ If the model is trained on full dataset and then evaluated on restricted dataset
 
 ![](images/experiment1_train_on_all_evaluate_on_subset.png)
 
-And mutatis mutandis:
+And *mutatis mutandis*:
 
 ![](images/experiment1_train_on_subset_evaluate_on_all.png)
+
+## Remarks before proceeding
+
+It would seem that training on unrestricted dataset is better for the models' performances. I therefore propose the future models be trained with full dataset, regardless of the `keep` tag.
 
