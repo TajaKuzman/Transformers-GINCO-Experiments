@@ -1,8 +1,7 @@
 # task5_webgenres
 
 
-**
-For logs of actual ML experiments take a look at EXPERIMENTS_LOG.md.**
+**For logs of actual ML experiments take a look at EXPERIMENTS_LOG.md.**
 
 
 ## Data preparation
