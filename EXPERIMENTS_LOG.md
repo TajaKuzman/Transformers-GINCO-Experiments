@@ -54,3 +54,13 @@ And *mutatis mutandis*:
 
 It would seem that training on unrestricted dataset is better for the models' performances. I therefore propose the future models be trained with full dataset, regardless of the `keep` tag.
 
+# Second Experiment
+
+## On the evaluation of multilabel predictions
+
+The output of the fasttext models is already a distribution, althogh we usually only look at the most probable label. The _true_ distribution can be parsed from the data and it is always either a distribution where a single label reaches 1 or a combination of two labels, one with probability 0.66 and another with probability 0.33.
+
+These two combinations can be evaluated with Jensen-Shannon distance measure, but in this case we lose information on the distributions of the labels. For a series of test data inputs it would return a series of scalar values, with no clear indication of what to do next. We could average it, or maybe plot the average for every primary label to get a sense of which classes perform better, but that is about it.
+
+What we could do instead is make use of F1 metric, that we already have and which can be directly compared with previous measurements
+
