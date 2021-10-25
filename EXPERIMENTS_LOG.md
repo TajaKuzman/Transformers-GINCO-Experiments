@@ -115,5 +115,9 @@ The output of the fasttext models is already a distribution, althogh we usually 
 
 These two combinations can be evaluated with Jensen-Shannon distance measure, but in this case we lose information on the distributions of the labels. For a series of test data inputs it would return a series of scalar values, with no clear indication of what to do next. We could average it, or maybe plot the average for every primary label to get a sense of which classes perform better, but that is about it.
 
-What we could do instead is make use of F1 metric, that we already have and which can be directly compared with previous measurements
+What we could do instead is make use of F1 metric, that we already have and which can be directly compared with previous measurements.
+
+It seems all prediction probabilities from `fasttext` always sum up to 1.0002, so not exactly to unity.
+
+
 
