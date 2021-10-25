@@ -50,6 +50,59 @@ And *mutatis mutandis*:
 
 ![](images/experiment1_train_on_subset_evaluate_on_all.png)
 
+I repeated the training and evaluation a few times. 
+
+
+First run:
+
+### micro F1 metrics
+
+|trained on \ evaluated on |full dataset| restricted dataset|
+|---|---|---|
+|full dataset |0.4162 |0.4277 | 
+|restricted dataset |0.3699 |0.3626 |
+
+
+
+### macro F1 metrics
+
+|trained on \ evaluated on |full dataset| restricted dataset|
+|---|---|---|
+|full dataset |0.2949 | 0.2966|
+|restricted dataset |0.2512 |0.2664 |
+
+Second run:
+
+### micro F1 metrics
+
+|trained on \ evaluated on |full dataset| restricted dataset|
+|---|---|---|
+|full dataset |0.3563 |0.3333 | 
+|restricted dataset |0.3699 |0.3626 |
+
+### macro F1 metrics
+
+|trained on \ evaluated on |full dataset| restricted dataset|
+|---|---|---|
+|full dataset |0.1549 | 0.1694|
+|restricted dataset |0.2512 |0.2664 |
+
+Third run:
+
+### micro F1 metrics
+
+|trained on \ evaluated on |full dataset| restricted dataset|
+|---|---|---|
+|full dataset |0.3678 |0.3333 | 
+|restricted dataset |0.3699 |0. 3626|
+
+### macro F1 metrics
+
+|trained on \ evaluated on |full dataset| restricted dataset|
+|---|---|---|
+|full dataset |0.2661 | 0.1691|
+|restricted dataset |0.2512 |0. 2664|
+
 ## Remarks before proceeding
 
 It would seem that training on unrestricted dataset is better for the models' performances. I therefore propose the future models be trained with full dataset, regardless of the `keep` tag.
