@@ -162,3 +162,23 @@ total 34G
 -rw-rw-r-- 1 peterr peterr    0 Oct 25 21:54 model_full_primary_15min_run19.bin
 -rw-rw-r-- 1 peterr peterr  11M Oct 25 11:03 model_onlykeep_onlyprimary.bin
 ```
+
+I repeatedly trained the classifiers on both datasets for 15 minutes. The resulting macro F1 scores look like this:
+
+![](images/metrics_distribution_macro.png)
+
+while the micro F1 scores look like this
+
+![](images/metrics_distribution_micro.png)
+
+Remarks:
++ On the full dataset the average metrics are lower than on the deduplicated dataset
++ Variances of both metrics recorded were significantly smaller for models trained on deduplicated dataset.
++ For both metrics the best performing runs were trained on the **full** dataset
+
+We can produce an average performing model also by training the model without optimization for 200 epochs. In this case the training takes only a few seconds and the calculated metrics are about an order of magnitude less dispersed than with optimization.
+
+![](images/metrics_distribution_macro_additional.png)
+
+![](images/metrics_distribution_micro_additional.png)
+  
