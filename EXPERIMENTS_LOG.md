@@ -119,5 +119,17 @@ What we could do instead is make use of F1 metric, that we already have and whic
 
 It seems all prediction probabilities from `fasttext` always sum up to 1.0002, so not exactly to unity.
 
+# After-meeting addendum
 
+I corrected the data so that I could perform the experiments with data based on the `duplicate` tag instead of the `keep` tag. While performing repeated training with the proper dataset I implemented a dummy classifier to check how the metrics look like for that. I checked two strategies, both on full dataset and on deduplicated dataset.
 
+  ## Full dataset:
+  ![](images/Dummy_stratified_full_stratified.png)
+
+  ![](images/Dummy_stratified_full_most_frequent.png)
+
+  ## Deduplicated dataset:
+
+  ![](images/Dummy_stratified_dedup_stratified.png)
+
+  ![](images/Dummy_stratified_dedup_most_frequent.png)
