@@ -1,0 +1,32 @@
+# Article review
+
+Regarding the metrics:
+
+* Beyond the English web:
+* *  They report F1 scores as well as confusion matrices. I was unable to replicate the reported metrics with the provided confusion matrices.
+* * They measure inter-annotator agreement with F1 scores as well, but they call that a lower bound for classifiers. Isn't it more reasonable to expect the classifier to perform worse than human annotators?
+* * Splitting is 50-20-30
+* * 10 registers, later downcast to 7
+
+* Multilingual and Zero-shot is closing on monolingual web register classification
+* * CORE dataset, split 50-20-30
+* * 8 CORE main registers, again downcast to 7
+* * Again they provide confusion matrices, which perform worse than reported F1 score
+
+
+* From bits and numbers to explanations:
+* * Precision and recall for 27 most frequent CORE registers, but grouped by lexical, grammatical or both feature sets
+* * Agregation again not specified
+* * Data split 80-20
+
+* Exploring the role of lexis and grammar for the stable identification of register in an unrestricted corpus of web documents
+* * Precision, recall, F1 scores and their standard deviations are reported for combinations of feature types (6 in total, Lexical, Grammatical, combination, word trigram, binary character fourgram....)
+* * Agregations are not specified, the dataset used is CORE
+* * Performed 100 experiments to test stability, weighted Welch test is used for p value calculation
+* * Standard deviations are big, e.g. F1 = 74.54 +/- 15.03
+* * F1 scores per register are reported in the appendix, graphically for 4 feature sets and in taabular form for 2 feature sets
+
+* Toward Multilingual Identification of online registers:
+* * CORE dataset, downsampled to 8 main registers, later only 6 registers results were reported (Lyrical and Spoken were dropped as they were underrepresented in the Finnish data.)
+* * Per register results reported with AUC scores - to replicate the data directly some preprocessing will be necessary
+
