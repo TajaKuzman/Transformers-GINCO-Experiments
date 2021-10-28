@@ -36,3 +36,4 @@ Regarding the metrics:
 * * Confusion matrices are published for Russian and English
 * * Baseline model: Logistic Regression
 * * The datasets used is the most similar to ours in size.
+* * After running the confusion matrix for English, the reported metrics check out.
