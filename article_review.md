@@ -30,3 +30,9 @@ Regarding the metrics:
 * * CORE dataset, downsampled to 8 main registers, later only 6 registers results were reported (Lyrical and Spoken were dropped as they were underrepresented in the Finnish data.)
 * * Per register results reported with AUC scores - to replicate the data directly some preprocessing will be necessary
 
+* Genre Annotation for the Web:
+* * 10 Functional Text Dimensions (FTDs), precisions and recalls are reported for each, study focuses on precision.
+* * No splitting, 10-fold cross validation is used
+* * Confusion matrices are published for Russian and English
+* * Baseline model: Logistic Regression
+* * The datasets used is the most similar to ours in size.
