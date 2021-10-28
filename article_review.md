@@ -28,7 +28,19 @@ Regarding the metrics:
 
 #  Toward Multilingual Identification of online registers:
 * CORE dataset, downsampled to 8 main registers, later only 6 registers results were reported (Lyrical and Spoken were dropped as they were underrepresented in the Finnish data.)
-* Per register results reported with AUC scores - to replicate the data directly some preprocessing will be necessary
+* Per register results reported with AUC scores - to replicate the data directly some preprocessing will be necessary:
+```python
+from sklearn.metrics import roc_auc_score
+from sklearn import preprocessing
+lb = preprocessing.LabelBinarizer()
+
+
+lb.fit(y_true)
+y_true_bin = lb.transform(y_true)
+y_pred_bin = lb.transform(y_pred)
+roc_auc_score(y_true_bin, y_pred_bin, average=None)
+```
+
 
 #  Genre Annotation for the Web:
 * 10 Functional Text Dimensions (FTDs), precisions and recalls are reported for each, study focuses on precision.
