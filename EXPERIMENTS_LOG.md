@@ -234,3 +234,9 @@ I also tried this setup with CUDA disabled, raising the IndexError again.
 
 Recasting the numeric labels as integers instead of floats did not change anything.
 
+# Addendum Fri Oct 29 11:35:38 CEST 2021
+
+As per Nikola's suggestion I'm omitting the hyperparameter optimization and moving on to training directly.
+
+I can't escape the CUDA errors. My current attempt is explicitly setting the number of labels in the text. It did not work on GPU but it does work with CUDA disabled.
+
