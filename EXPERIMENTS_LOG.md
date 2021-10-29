@@ -228,3 +228,9 @@ With CUDA still disabled I removed the preprocessing from the code, which means 
 
 ```ValueError: too many dimensions 'str'```
 
+Dropping the batch size to 4 produced the same error. I finally reimplemented numerical encoder again to remove this error, which some sources say could be due to strings not being converted to numerical types automatically. And with this setup we again get the first CUDA runtime error...
+
+I also tried this setup with CUDA disabled, raising the IndexError again.
+
+Recasting the numeric labels as integers instead of floats did not change anything.
+
