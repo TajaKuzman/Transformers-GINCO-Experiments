@@ -181,4 +181,50 @@ We can produce an average performing model also by training the model without op
 ![](images/metrics_distribution_macro_additional.png)
 
 ![](images/metrics_distribution_micro_additional.png)
-  
+
+
+# Addendum Fri Oct 29 09:36:35 CEST 2021
+
+So far W&B hyperparameter optimization was not successful. The traceback is a bit mistic:
+
+
+```
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+```
+The error occurs after the first optimization run, but when reruning the same code, it gets raised immediately.
+
+The GPU memory is fine:
+
+```(base) peterr@kt-gpu-vm-1TB:~$ nvidia-smi
+Fri Oct 29 09:47:34 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 460.32.03    Driver Version: 460.32.03    CUDA Version: 11.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:03:00.0 Off |                    0 |
+| N/A   30C    P0    54W / 300W |   2547MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A       971      C   ...terr/anaconda3/bin/python     2545MiB |
++-----------------------------------------------------------------------------+
+```
+
+If I instead set the option `use_cuda = False`, I get an error raised by pytorch when calculating cross entropy:
+
+```IndexError: Target 9 is out of bounds.```
+
+With CUDA still disabled I removed the preprocessing from the code, which means that the labels were kept as a list of strings. Again I was not successfull, this time I got served with 
+
+```ValueError: too many dimensions 'str'```
+
