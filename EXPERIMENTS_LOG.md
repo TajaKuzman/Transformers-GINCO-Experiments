@@ -240,3 +240,10 @@ As per Nikola's suggestion I'm omitting the hyperparameter optimization and movi
 
 I can't escape the CUDA errors. My current attempt is explicitly setting the number of labels in the text. It did not work on GPU but it does work with CUDA disabled.
 
+5 epochs takes 20 minutes, but the results are not encouraging (macro F1: 0.1273). I will repeat the training again with 10 epochs.
+
+
+# Addendum 2021-11-02T08:25:06
+
+The cache, wandb files and output models once again filled the diskspace beyond usability. Furthermore, I found the full disk corrupted the ipynb file I used to run and evaluate results, which is why I reverted it to its state before the last experiment. I cleaned the auxiliary files and continued searching for a practical implementation of simpletransformers classifier.
+
