@@ -245,5 +245,7 @@ I can't escape the CUDA errors. My current attempt is explicitly setting the num
 
 # Addendum 2021-11-02T08:25:06
 
-The cache, wandb files and output models once again filled the diskspace beyond usability. Furthermore, I found the full disk corrupted the ipynb file I used to run and evaluate results, which is why I reverted it to its state before the last experiment. I cleaned the auxiliary files and continued searching for a practical implementation of simpletransformers classifier.
+The cache, wandb files and output models once again filled the diskspace beyond usability. Furthermore, I found the full disk corrupted the ipynb file I used to run and evaluate results, rendering the file unusable. I cleaned the auxiliary files and continued searching for a practical implementation of simpletransformers classifier from scratch.
+
+As before I encountered unexpected errors with textual labels, which is why I manually converted them to integers in parsing. In this configuration the training was successfully started.
 
