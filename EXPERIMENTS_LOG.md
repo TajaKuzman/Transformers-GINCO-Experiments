@@ -257,4 +257,11 @@ As we can see, the confusion matrix is way more diagonal, which is confirmed als
 
 ![](images/SLOBERTA_30_epochs_full_ds.png)
 
+
 ![](images/SLOBERTA_50_epochs_full_ds.png)
+
+# Addendum 2021-11-02T17:31:45
+
+I've started a hyperparameter optimization of sorts. On existing splits I'm training on train and evaluating on dev+test. The grid search will consist of running through two possible sequence lenghts (256 and 512), different epochs (5, 10, 20, 30, 50, 70), and full or deduplicated datasets.
+
+More information to follow.

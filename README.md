@@ -95,3 +95,7 @@ In the next iteration I discarded the idea of correcting domain-based data leaka
 |tabular_2.csv|correct downsampling|dev_2.csv, train_2.csv, test_2.csv|
 |tabular_2b.csv|correct downsampling, stratification on year and primary|dev_2b.csv, train_2b.csv, test_2b.csv|
 |tabular_2c.csv|correct downsampling, stratification on primary|dev_2c.csv, train_2c.csv, test_2c.csv|
+
+# Addendum 2021-11-02T14:53:10
+
+With new information in mind I once again repeated the splitting, keeping an eye on labels being present in all three folds. It seems quite a hard thing to do and I soon automated it to perform the task automatically, until it either reaches a solution or hits a predetermined limit of iterations. In 1e3 iterations there have been no solutions.
