@@ -247,5 +247,13 @@ I can't escape the CUDA errors. My current attempt is explicitly setting the num
 
 The cache, wandb files and output models once again filled the diskspace beyond usability. Furthermore, I found the full disk corrupted the ipynb file I used to run and evaluate results, rendering the file unusable. I cleaned the auxiliary files and continued searching for a practical implementation of simpletransformers classifier from scratch.
 
-As before I encountered unexpected errors with textual labels, which is why I manually converted them to integers in parsing. In this configuration the training was successfully started.
+As before I encountered unexpected errors with textual labels, which is why I manually converted them to integers in parsing. In this configuration the training was successfully started. I can also use CUDA, which makes the training about twice as fast.
+
+After the initial hurdles I was able to produce this confusion matrix plot:
+
+![](images/SLOBERTA_20_epochs_full_ds.png)
+
+As we can see, the confusion matrix is way more diagonal, which is confirmed also by the biggest values of both metrics used. I shall now try and improve this milestone with prolonged training:
+
+![](images/SLOBERTA_30_epochs_full_ds.png)
 
