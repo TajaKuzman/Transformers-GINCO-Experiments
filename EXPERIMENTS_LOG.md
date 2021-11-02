@@ -257,3 +257,4 @@ As we can see, the confusion matrix is way more diagonal, which is confirmed als
 
 ![](images/SLOBERTA_30_epochs_full_ds.png)
 
+![](images/SLOBERTA_50_epochs_full_ds.png)
