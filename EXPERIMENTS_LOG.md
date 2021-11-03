@@ -285,4 +285,14 @@ To directly compare the effect of the sequence length and dataset size, I plotte
 
 ![](images/hyperparams_4.png)
 
+
+
 In this preliminary run it would seem that we should really increase the sequence length to 512 and work on full dataset to maximize macro F1 score. There seems to be still some room for improvement regarding the number of epochs. I will run more tests to confirm this, as well as to check what is going on with the model, trained for 30 epochs, that seems to be outlier.
+
+# Addendum 2021-11-03T18:13:57
+
+I inserted a few additional datapoints and calculated the metrics for those as well. Unfortunately, the sweep was not fully successful due to CUDA memory errors that I was not able to resolve. The configurations that workd are evaluated below:
+
+![](images/hyperparams_7.png)
+
+![](images/hyperparams_8.png)
