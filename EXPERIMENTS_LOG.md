@@ -265,3 +265,7 @@ As we can see, the confusion matrix is way more diagonal, which is confirmed als
 I've started a hyperparameter optimization of sorts. On existing splits I'm training on train and evaluating on dev+test. The grid search will consist of running through two possible sequence lenghts (256 and 512), different epochs (5, 10, 20, 30, 50, 70), and full or deduplicated datasets.
 
 More information to follow.
+
+# Addendum 2021-11-03T06:34:52
+
+Grid search for optimal parameters crashed sometime during the night, but the already calculated results were recoverable and we could continue with the training and evaluations right away.
