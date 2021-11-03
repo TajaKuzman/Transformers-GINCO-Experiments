@@ -269,3 +269,20 @@ More information to follow.
 # Addendum 2021-11-03T06:34:52
 
 Grid search for optimal parameters crashed sometime during the night, but the already calculated results were recoverable and we could continue with the training and evaluations right away.
+
+
+In a scenario where we only look at the performance of the model under its previous configuration we can see that we cannot confirm our hypothesis that the model starts overfitting after 30 epochs:
+
+![](images/hyperparams_1.png)
+
+A similar behaviour can also be seen on dedupped dataset:
+
+![](images/hyperparams_2.png)
+
+To directly compare the effect of the sequence length and dataset size, I plotted the macro and micro F1 separately:
+
+![](images/hyperparams_3.png)
+
+![](images/hyperparams_4.png)
+
+In this preliminary run it would seem that we should really increase the sequence length to 512 and work on full dataset to maximize macro F1 score. There seems to be still some room for improvement regarding the number of epochs. I will run more tests to confirm this, as well as to check what is going on with the model, trained for 30 epochs, that seems to be outlier.
