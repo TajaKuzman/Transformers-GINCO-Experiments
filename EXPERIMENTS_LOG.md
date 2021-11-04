@@ -322,17 +322,28 @@ The results are logged, so even in the case of catastrophic error some data shou
 
 # Addendum 2021-11-04T13:03:12
 
-First inconclusive results are in. Three aditional runs on deduplicated data are still running, they will be done soon. When done, I will have a sample of at least 5 training runs, evaluated on either dev or test data, either full or deduplicated. In the table below the results are sorted by descending average macro F1 score:
+First results are in. ~~Three aditional runs on deduplicated data are still running, they will be done soon.~~  When done, I will have a sample of at least 5 training runs, evaluated on either dev or test data, either full or deduplicated. In the table below the results are sorted by descending average macro F1 score:
 
 |trained on | evaluated on | micro F1 | macro F1|
 |---        | ---          | ---      | ---     |
 |full|test, full|0.615 +/- 0.021|0.613+/-0.0251|
 |full|test, dd|0.618 +/- 0.00873|0.56+/-0.013|
+|dd|test, dd|0.623 +/- 0.0126|0.559+/-0.0428|
 |full|dev, dd|0.635 +/- 0.00932|0.558+/-0.0162|
-|dd|test, dd|0.623 +/- 0.0126|0.556+/-0.0496|
-|dd|test, full|0.542 +/- 0.0168|0.51+/-0.0287|
-|dd|dev, dd|0.598 +/- 0.00795|0.541+/-0.0261|
+|dd|dev, dd|0.597 +/- 0.00919|0.552+/-0.0387|
 |full|dev, full|0.583 +/- 0.00927|0.506+/-0.0249|
-|dd|dev, full|0.533 +/- 0.0175|0.445+/-0.0686|
+|dd|test, full|0.541 +/- 0.0129|0.5+/-0.0287|
+|dd|dev, full|0.529 +/- 0.0179|0.451+/-0.0547|
 
-It is clear that there are benefits in keeping all of the training data. As of yet I cannot yet decisively why test and dev splits behave rather differently. I will augment these average metrics with some confusion matrices, which were also logged during the evaluation process.
+It still seems that there are benefits in keeping all of the training data. As of yet I cannot yet decisively why test and dev splits behave rather differently. I will augment these average metrics with some confusion matrices, which were also logged during the evaluation process.
+
+
+For ALL the runs, trained on full data and evaluated on full test split, the sum of all of the confusion matrices looks like this:
+
+![](images/13_test_full_aggregated.png)
+
+While for all the runs, trained on full data and evaluated on full _dev_ split, the sum of all of the confusion matrices looks like this:
+
+![](images/13_dev_full_aggregated.png)
+
+I also plotted individual confusion matrices and saved them in the `images` folder, but I shall not paste them here as they would clutter the log.
