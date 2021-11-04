@@ -296,3 +296,15 @@ I inserted a few additional datapoints and calculated the metrics for those as w
 ![](images/hyperparams_7.png)
 
 ![](images/hyperparams_8.png)
+
+
+# Addendum 2021-11-04T08:23:28
+
+New data splits are ready. New . Great care was taken to assure no domain leakage as well as consinstent primary label distribution. The algorythm used is partially stochastic and exact duplication of the process will not be easy. The distributions are as follow:
+
+![](images/1d_primaries.png)
+
+![](images/1d_crawled.png)
+
+![](images/1d_hardness.png)
+
