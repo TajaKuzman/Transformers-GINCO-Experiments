@@ -347,3 +347,7 @@ While for all the runs, trained on full data and evaluated on full _dev_ split, 
 ![](images/13_dev_full_aggregated.png)
 
 I also plotted individual confusion matrices and saved them in the `images` folder, but I shall not paste them here as they would clutter the log.
+
+# Addendum 2021-11-04T16:11:43
+
+In concordance with the decisions from the Skype meeting I prepare a new dataset, this time again looking at the `keep` tag and disregarding the `duplicate` tag. I set up the experiment in the same manner as before, trained the model 5 times (30 epochs, 512 seq length), and after every run I evaluated it on full test set and deduplicated test set. 
