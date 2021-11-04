@@ -314,5 +314,7 @@ With these changes I can continue with the experiments.
 
 In a similar fashion than _Beyond the English Web_ I train the classifier on train split (either dedupped or nor) and evaluate it on all dev and test splits. The sequence length used is 512 and the number of epochs is fixed at 30, the presumed optimum from preliminary experiments.
 
-The results are logged, so even in the case of catastrophic error some data should be recoverable.
+The results are logged, so even in the case of catastrophic error some data should be recoverable. By extrapolating the first runs I estimate the training will take an hour for every training dataset, so about 2h in total.
+
+
 
