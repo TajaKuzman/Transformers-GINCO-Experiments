@@ -300,7 +300,7 @@ I inserted a few additional datapoints and calculated the metrics for those as w
 
 # Addendum 2021-11-04T08:23:28
 
-New data splits are ready. New . Great care was taken to assure no domain leakage as well as consinstent primary label distribution. The algorythm used is partially stochastic and exact duplication of the process will not be easy. The distributions are as follow:
+New data splits are ready. Great care was taken to assure no domain leakage as well as consinstent primary label distribution. The algorythm used is partially stochastic and exact duplication of the process will not be easy. The distributions are as follow:
 
 ![](images/1d_primaries.png)
 
