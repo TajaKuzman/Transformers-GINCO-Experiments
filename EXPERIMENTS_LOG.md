@@ -351,3 +351,21 @@ I also plotted individual confusion matrices and saved them in the `images` fold
 # Addendum 2021-11-04T16:11:43
 
 In concordance with the decisions from the Skype meeting I prepare a new dataset, this time again looking at the `keep` tag and disregarding the `duplicate` tag. I set up the experiment in the same manner as before, trained the model 5 times (30 epochs, 512 seq length), and after every run I evaluated it on full test set and deduplicated test set. 
+
+We will need to ascertain that the presumed best performing models are in fact the best. Consider this section of the upper table:
+
+|trained on | evaluated on | micro F1 | macro F1|
+|---        | ---          | ---      | ---     |
+|full|test, full|0.615 +/- 0.021|0.613+/-0.0251|
+|dd|test, dd|0.623 +/- 0.0126|0.559+/-0.0428|
+
+We need to see whether the performance of the second model (trained and evaluated on dedup dataset) is in fact statistically significantly worse than that of the first model (trained and evaluated on full dataset).
+
+|    | description                                             | micro F1         | macro F1         |
+|---:|:--------------------------------------------------------|:-----------------|:-----------------|
+|  0 | trained on full, evaluated on full                      | 0.615 +/- 0.0235 | 0.613 +/- 0.0281 |
+|  1 | trained on deduplicated, evaluated on deduplicated      | 0.623 +/- 0.0137 | 0.559 +/- 0.0463 |
+|  2 | trained on only keep == True, evaluated on deduplicated | 0.673 +/- 0.0189 | 0.65 +/- 0.0299  |
+|  3 | trained on only keep == True, evaluated on full         | 0.56 +/- 0.0278  | 0.551 +/- 0.0412 |
+
+As we can see, both micro and macro F1 scores are more than 1-sigma better than alternatives. I therefore start preparing the data with the secondary labels with this setup. For training data only the data with tag `keep:true` will be taken, and for evaluation only data with `duplicate:false` will be taken. 
