@@ -394,6 +394,8 @@ Student p value: 0.107 		(null hypothesis: samples have identical average, equal
 Higher average: 0.6129, lower average: 0.5643
 ```
 
+As we can see, there is not much we can say for certain. One metric favours the first setup and another the second. The differences are not statistically significant.
+
 We can also try and test that the apparently best configuration `train: only keep, test:dd` is better than the other two strategies discussed here:
 
 * Micro F1:
@@ -437,7 +439,7 @@ As we can see, we cannot reject the hypothesis that macro F1 is higher in the ca
 
 # Addendum 2021-11-07T17:49:10
 
-New data was prepared, with the changes on secondary label as agreed (DELETE secondary label WHERE primary label IS 'List of Summaries/Excerpts').
+New data was prepared, with the changes on secondary label as agreed (`DELETE secondary label WHERE primary label IS 'List of Summaries/Excerpts'`).
 
 For the secondary experiment only training data instances where `keep=True`, and evaluation will be performed on deduplicated test data.
 
