@@ -454,7 +454,7 @@ We get the following metrics:
 
 |    | description                                             | micro F1         | macro F1         |
 |---:|:--------------------------------------------------------|:-----------------|:-----------------|
-|  0 | trained on keep=True, evaluated on dedup, with secondary labels, pessimistic metric| 0.61 +/- 0.0265 | 0.531 +/- 0.0424|
-|  0 | trained on keep=True, evaluated on dedup, with secondary labels, optimistic metric| 0.664 +/- 0.025 | 0.556 +/- 0.0419|
+|  1 | trained on keep=True, evaluated on dedup, with secondary labels, pessimistic metric| 0.61 +/- 0.0265 | 0.531 +/- 0.0424|
+|  2 | trained on keep=True, evaluated on dedup, with secondary labels, optimistic metric| 0.664 +/- 0.025 | 0.556 +/- 0.0419|
 
 As suspected, the pessimistic metrics are lower than optimistic, but the difference is not big.
