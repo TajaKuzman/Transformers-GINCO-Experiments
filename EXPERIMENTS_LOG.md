@@ -365,7 +365,92 @@ We need to see whether the performance of the second model (trained and evaluate
 |---:|:--------------------------------------------------------|:-----------------|:-----------------|
 |  0 | trained on full, evaluated on full                      | 0.615 +/- 0.0235 | 0.613 +/- 0.0281 |
 |  1 | trained on deduplicated, evaluated on deduplicated      | 0.623 +/- 0.0137 | 0.559 +/- 0.0463 |
-|  2 | trained on only keep == True, evaluated on deduplicated | 0.673 +/- 0.0189 | 0.65 +/- 0.0299  |
+|  2 | **trained on only keep == True, evaluated on deduplicated **| 0.673 +/- 0.0189 | 0.65 +/- 0.0299  |
 |  3 | trained on only keep == True, evaluated on full         | 0.56 +/- 0.0278  | 0.551 +/- 0.0412 |
 
 As we can see, both micro and macro F1 scores are more than 1-sigma better than alternatives. I therefore start preparing the data with the secondary labels with this setup. For training data only the data with tag `keep:true` will be taken, and for evaluation only data with `duplicate:false` will be taken. 
+
+# Addendum 2021-11-05T07:49:10
+
+Let's check the statistical significance of the results above. In the meeting we said we want to prove that setup `train: full, test: full` is better than `train:dd, test:dd`.
+ 
+ * Micro F1:
+Since the average value of micro F1 is lower for the proposed best model, we can't expect low p-values, and so:
+```
+Wilcoxon p value: 0.844 		(alternative hypothesis: first is greater than the second)
+MannWhithey p value: 0.853 		(alternative hypothesis: first is greater than the second)
+Student p value: 0.383 		(null hypothesis: samples have identical average, equal variance is assumed but not necessary)
+Higher average: 0.615, lower average: 0.6264
+```
+
+* Macro F1:
+
+Again the hypothesis was that  `train: full, test: full` is better than `train:dd, test:dd`. In this case we see the differences are not statistically significant:
+
+```
+Wilcoxon p value: 0.0312 		(alternative hypothesis: first is greater than the second)
+MannWhithey p value: 0.0718 		(alternative hypothesis: first is greater than the second)
+Student p value: 0.107 		(null hypothesis: samples have identical average, equal variance is assumed but not necessary)
+Higher average: 0.6129, lower average: 0.5643
+```
+
+We can also try and test that the apparently best configuration `train: only keep, test:dd` is better than the other two strategies discussed here:
+
+* Micro F1:
+
+Tested against `train:full, test:full`:
+```
+Wilcoxon p value: 0.0312 		(alternative hypothesis: first is greater than the second)
+MannWhithey p value: 0.0106 		(alternative hypothesis: first is greater than the second)
+Student p value: 0.0026 		(null hypothesis: samples have identical average, equal variance is assumed but not necessary)
+Higher average: 0.673, lower average: 0.615
+```
+
+Tested against `train:dd, test:dd`:
+```
+Wilcoxon p value: 0.0312 		(alternative hypothesis: first is greater than the second)
+MannWhithey p value: 0.00583 		(alternative hypothesis: first is greater than the second)
+Student p value: 0.00241 		(null hypothesis: samples have identical average, equal variance is assumed but not necessary)
+Higher average: 0.673, lower average: 0.6264
+```
+
+* Macro F1:
+
+Tested against `train:full, test:full`: **-> not statistically significant**
+```
+Wilcoxon p value: 0.0938 		(alternative hypothesis: first is greater than the second)
+MannWhithey p value: 0.0473 		(alternative hypothesis: first is greater than the second)
+Student p value: 0.0791 		(null hypothesis: samples have identical average, equal variance is assumed but not necessary)
+Higher average: 0.6498, lower average: 0.6129
+```
+
+Tested against `train:dd, test:dd`:
+```
+Wilcoxon p value: 0.0312 		(alternative hypothesis: first is greater than the second)
+MannWhithey p value: 0.0108 		(alternative hypothesis: first is greater than the second)
+Student p value: 0.0137 		(null hypothesis: samples have identical average, equal variance is assumed but not necessary)
+Higher average: 0.6498, lower average: 0.5643
+```
+
+As we can see, we cannot reject the hypothesis that macro F1 is higher in the case of `train: only keep, test:dd` than in the case of `train:dd, test:dd`. The rest of the comparisons show p<0.05.
+
+
+# Addendum 2021-11-07T17:49:10
+
+New data was prepared, with the changes on secondary label as agreed (DELETE secondary label WHERE primary label IS 'List of Summaries/Excerpts').
+
+For the secondary experiment only training data instances where `keep=True`, and evaluation will be performed on deduplicated test data.
+
+After evaluating we first parse the true and predicted labels. With the combined primary and secondary labels some preprocessing was needed to extract exactly what we need. Two strategies will be looked into:
+
+1. The classifier only returns one label and we hope that perhaps the data with secondary labels made the model better.
+2. The classifier returns primary and secondary label, a custom F1 scoring is then implemented to evaluate the results.
+
+In the first case we get the following metrics:
+
+
+|    | description                                             | micro F1         | macro F1         |
+|---:|:--------------------------------------------------------|:-----------------|:-----------------|
+|  0 | trained on keep=True, evaluated on dedup, with secondary labels| 0.531 +/- 0.0424 | 0.531 +/- 0.0424|
+
+In the second case the F1 scoring implemented will be done by first constructing a confusion matrix.
