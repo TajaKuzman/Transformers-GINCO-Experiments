@@ -443,14 +443,18 @@ For the secondary experiment only training data instances where `keep=True`, and
 
 After evaluating we first parse the true and predicted labels. With the combined primary and secondary labels some preprocessing was needed to extract exactly what we need. Two strategies will be looked into:
 
-1. The classifier only returns one label and we hope that perhaps the data with secondary labels made the model better.
-2. The classifier returns primary and secondary label, a custom F1 scoring is then implemented to evaluate the results.
+1. "Pessimistic" case: we have data prepared in a three-instances manner both for train and test, we predict for each test triple one label and repeat it three times, if there is only one label in test, we will have either three hits or three misses, in the case of 2 and 1, we will have either 2 hits, 1 hit, or 0 hits
 
-In the first case we get the following metrics:
+
+2. The classifier predicts a label and the label is then evaluated against first and secondary labels. If the prediction is equal to primary, all is clear, if it is equal to secondary, consider this a hit for the secondary category, if it fails on both, then it is a miss for the primary category
+   
+
+We get the following metrics:
 
 
 |    | description                                             | micro F1         | macro F1         |
 |---:|:--------------------------------------------------------|:-----------------|:-----------------|
-|  0 | trained on keep=True, evaluated on dedup, with secondary labels| 0.531 +/- 0.0424 | 0.531 +/- 0.0424|
+|  0 | trained on keep=True, evaluated on dedup, with secondary labels, pessimistic metric| 0.61 +/- 0.0265 | 0.531 +/- 0.0424|
+|  0 | trained on keep=True, evaluated on dedup, with secondary labels, optimistic metric| 0.664 +/- 0.025 | 0.556 +/- 0.0419|
 
-In the second case the F1 scoring implemented will be done by first constructing a confusion matrix.
+As suspected, the pessimistic metrics are lower than optimistic, but the difference is not big.
