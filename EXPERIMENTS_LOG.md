@@ -499,3 +499,41 @@ We can also see a trend that inclusion of `dev` split seems to be detrimental to
 Graphically we can represent these metrics like this:
 
 ![](images/17_stats_plot.png)
+
+Let us dissect the table below a bit:
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('dd', 'dev_dd')         |              0.598995 |           0.0130072  |              0.542702 |            0.0290347 |
+| ('dd', 'devtest_dd')     |              0.616162 |           0.0133624  |              0.594515 |            0.0224479 |
+| ('dd', 'test_dd')        |              0.633503 |           0.0177302  |              0.607424 |            0.0285351 |
+
+We can clearly see that where we trained on `dd` dataset,  `test` performs better than `dev`, with `devtest` in between. This holds for both metrics.
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('full', 'dev_full')     |              0.571    |           0.0138744  |              0.489071 |            0.0449579 |
+| ('full', 'devtest_full') |              0.5855   |           0.00512348 |              0.550986 |            0.0297173 |
+| ('full', 'test_full')    |              0.6      |           0.0165831  |              0.598651 |            0.0283954 |
+
+Again, the same is true for training on `full` train set.
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('ok', 'dev_full')       |              0.533    |           0.0144049  |              0.447262 |            0.051518  |
+| ('ok', 'devtest_full')   |              0.5365   |           0.0162596  |              0.512773 |            0.0412814 |
+| ('ok', 'test_full')      |              0.54     |           0.0259808  |              0.52644  |            0.0622833 |
+
+The same behaviour can be seen if we train on data where `keep==True`, but only if we evaluate on `full` datasets. If we use deduplicated datasets for evaluation, we find a weak inverted trend in `microF1`, but we do not see the same trend in `macroF1`:
+
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('ok', 'dev_dd')         |              0.60804  |           0.0154885  |              0.543725 |            0.0315722 |
+| ('ok', 'devtest_dd')     |              0.60202  |           0.00382974 |              0.575571 |            0.0133973 |
+| ('ok', 'test_dd')        |              0.595939 |           0.018161   |              0.541691 |            0.020998  |
+
+If we compare microF1 for presumed best setup ('ok', 'dev_dd') vs ('ok', 'devtest_dd'), we find that MannWhitney U test p-value is 0.144, meaning that we cannot be certain the first setup is better. If we continue and try the ('ok', 'devtest_dd') as presumed best and ('ok', 'test_dd') as presumed worse, we get p-value of 0.336.
+
+For macroF1 the first p-value is 0.953, while the second p-value is 0.0184
+
