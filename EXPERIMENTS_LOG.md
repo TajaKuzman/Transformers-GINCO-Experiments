@@ -493,3 +493,9 @@ Again we can see that setups `train: ok, eval: *_dd` prove a bit better than the
 The highest scores, however, can be found with the setups `train: dd, eval: *_dd`.
 
 We can also see a trend that inclusion of `dev` split seems to be detrimental to the models performance: except `train: ok, eval: *_dd` all of the setups show better performance when evaluated on test than when evaluated on dev, with devtest being in the middle.
+
+
+
+Graphically we can represent these metrics like this:
+
+![](images/17_stats_plot.png)
