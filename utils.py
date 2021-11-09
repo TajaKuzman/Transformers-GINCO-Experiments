@@ -64,7 +64,7 @@ def train_model(train_df, NUM_EPOCHS=30):
     model.train_model(train_df)
     return model
 
-def eval_model(test_df):
+def eval_model(test_df, model):
     y_true_enc = test_df.labels
     y_pred_enc = model.predict(test_df.text.tolist())[0]
 
@@ -76,7 +76,7 @@ def eval_model(test_df):
 
     return {"microF1": microF1, 
             "macroF1": macroF1,
-            "y_true": y_true_enc,
-            "y_pred": y_pred_enc}
+            "y_true": y_true_enc.tolist(),
+            "y_pred": y_pred_enc.tolist()}
 
 
