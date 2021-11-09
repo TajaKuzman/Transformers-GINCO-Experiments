@@ -460,3 +460,30 @@ We get the following metrics:
 |  2 | trained on keep=True, evaluated on dedup, with secondary labels, optimistic metric| 0.664 +/- 0.025 | 0.556 +/- 0.0419|
 
 As suspected, the pessimistic metrics are lower than optimistic, but the difference is not big.
+
+
+# Addendum 2021-11-08T12:30:00
+
+We will repeat the primary-label-only training on different setups of training data and evaluate it on dev, test, and devtest. First I setup a training process that iterated through configurations and trained the models 5 times on different training data, and then evaluate them on different training data.
+
+I had an idea to first train the models, save them and later evaluate them, but as of yet I am not yet able to do it in an effective and controlled manner. I performed the training and evaluation as before and obtained the following statistics:
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('dd', 'dev_dd')         |              0.598995 |           0.0130072  |              0.542702 |            0.0290347 |
+| ('dd', 'devtest_dd')     |              0.616162 |           0.0133624  |              0.594515 |            0.0224479 |
+| ('dd', 'test_dd')        |              0.633503 |           0.0177302  |              0.607424 |            0.0285351 |
+| ('full', 'dev_full')     |              0.571    |           0.0138744  |              0.489071 |            0.0449579 |
+| ('full', 'devtest_full') |              0.5855   |           0.00512348 |              0.550986 |            0.0297173 |
+| ('full', 'test_full')    |              0.6      |           0.0165831  |              0.598651 |            0.0283954 |
+| ('ok', 'dev_dd')         |              0.60804  |           0.0154885  |              0.543725 |            0.0315722 |
+| ('ok', 'dev_full')       |              0.533    |           0.0144049  |              0.447262 |            0.051518  |
+| ('ok', 'devtest_dd')     |              0.60202  |           0.00382974 |              0.575571 |            0.0133973 |
+| ('ok', 'devtest_full')   |              0.5365   |           0.0162596  |              0.512773 |            0.0412814 |
+| ('ok', 'test_dd')        |              0.595939 |           0.018161   |              0.541691 |            0.020998  |
+| ('ok', 'test_full')      |              0.54     |           0.0259808  |              0.52644  |            0.0622833 |
+
+
+Or, with prettier formatting:
+
+![](images/17_stats.png)
