@@ -604,3 +604,27 @@ The experiments, performed on the same evaluation split, have been sorted in asc
 | ('dd', 'test_dd')        |              0.633503 |           0.0177302  |              0.607424 |            0.0285351 |
 
 In general, deduplicated evaluation datasets seem to outperform full evaluation datasets.
+
+
+### Generalised findings:
+
+* Re: evaluation data: `dev < devtest < test`
+* Re: evaluation data preparation: `full < dedup `
+* Re: choice of training data preparation: inconclusive.
+
+If we look at the results purely from the training data preparation, we get the following:
+
+| train   |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:--------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ok      |               0.56925 |            0.0369484 |              0.524577 |            0.0545578 |
+| full    |               0.5855  |            0.017066  |              0.546236 |            0.0567143 |
+| dd      |               0.61622 |            0.0200452 |              0.581547 |            0.0381523 |
+
+Averaged across all evaluation setups it seems it would be better to train on deduplicated data.
+
+
+
+
+
+
+
