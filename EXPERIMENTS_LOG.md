@@ -624,9 +624,15 @@ Averaged across all evaluation setups it seems it would be better to train on de
 
 If we chose to follow the best setup, we would train on deduplicated train and evaluate on deduplicated test, which is precisely the setup that actually produces best performance in our experiments.
 
+TO-DO:
+* Start on second experiment: secondary labels. Deduplicated on train and on evaluation dataset, secondary labels only for train.
+* Keep the true and predicted labels in the future.
+* Explain the difference with last week's experiments. Why `ok, test_dd` proved best last week but not today? Why are last weeks metrics so high? Check the code, if there are no bugs, rerun last week's code. 
+* In the future: use dev and test splits. Go with `dd` data.
+* Include more statistical analyses in the future.
 
 
 
+# Addendum 2021-11-09T15:25:08
 
-
-
+I start preparing the Q2 experiments. Secondary labels will be added only on train side. `dd` data will be used on all splits.
