@@ -533,6 +533,8 @@ The same behaviour can be seen if we train on data where `keep==True`, but only 
 | ('ok', 'devtest_dd')     |              0.60202  |           0.00382974 |              0.575571 |            0.0133973 |
 | ('ok', 'test_dd')        |              0.595939 |           0.018161   |              0.541691 |            0.020998  |
 
+The last table could benefit some statistical analysis.
+
 If we compare microF1 for presumed best setup ('ok', 'dev_dd') vs ('ok', 'devtest_dd'), we find that MannWhitney U test p-value is 0.144, meaning that we cannot be certain the first setup is better. If we continue and try the ('ok', 'devtest_dd') as presumed best and ('ok', 'test_dd') as presumed worse, we get p-value of 0.336.
 
 For macroF1 the first p-value is 0.953, while the second p-value is 0.0184
