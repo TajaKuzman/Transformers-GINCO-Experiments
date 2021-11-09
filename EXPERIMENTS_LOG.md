@@ -500,7 +500,10 @@ Graphically we can represent these metrics like this:
 
 ![](images/17_stats_plot.png)
 
-Let us dissect the table below a bit:
+
+### Results analysis - group by train data setup:
+
+Let us dissect the table below a bit. First we group it by training data setup:
 
 |(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
 |:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
@@ -539,3 +542,65 @@ If we compare microF1 for presumed best setup ('ok', 'dev_dd') vs ('ok', 'devtes
 
 For macroF1 the first p-value is 0.953, while the second p-value is 0.0184
 
+
+### Results analysis - group by evaluation dataset setup:
+
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('dd', 'dev_dd')         |              0.598995 |           0.0130072  |              0.542702 |            0.0290347 |
+| ('ok', 'dev_dd')         |              0.60804  |           0.0154885  |              0.543725 |            0.0315722 |
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('ok', 'dev_full')       |              0.533    |           0.0144049  |              0.447262 |            0.051518  |
+| ('full', 'dev_full')     |              0.571    |           0.0138744  |              0.489071 |            0.0449579 |
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('ok', 'devtest_dd')     |              0.60202  |           0.00382974 |              0.575571 |            0.0133973 |
+| ('dd', 'devtest_dd')     |              0.616162 |           0.0133624  |              0.594515 |            0.0224479 |
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('ok', 'devtest_full')   |              0.5365   |           0.0162596  |              0.512773 |            0.0412814 |
+| ('full', 'devtest_full') |              0.5855   |           0.00512348 |              0.550986 |            0.0297173 |
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('ok', 'test_dd')        |              0.595939 |           0.018161   |              0.541691 |            0.020998  |
+| ('dd', 'test_dd')        |              0.633503 |           0.0177302  |              0.607424 |            0.0285351 |
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('ok', 'test_full')      |              0.54     |           0.0259808  |              0.52644  |            0.0622833 |
+| ('full', 'test_full')    |              0.6      |           0.0165831  |              0.598651 |            0.0283954 |
+
+The experiments, performed on the same evaluation split, have been sorted in ascending F1 score. Micro and Macro F1 correlate very well, we have no pair where one would increase and the other would decrease.
+
+
+### Results analysis - group by evaluation dataset split:
+
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('ok', 'dev_full')       |              0.533    |           0.0144049  |              0.447262 |            0.051518  |
+| ('full', 'dev_full')     |              0.571    |           0.0138744  |              0.489071 |            0.0449579 |
+| ('dd', 'dev_dd')         |              0.598995 |           0.0130072  |              0.542702 |            0.0290347 |
+| ('ok', 'dev_dd')         |              0.60804  |           0.0154885  |              0.543725 |            0.0315722 |
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('ok', 'devtest_full')   |              0.5365   |           0.0162596  |              0.512773 |            0.0412814 |
+| ('full', 'devtest_full') |              0.5855   |           0.00512348 |              0.550986 |            0.0297173 |
+| ('ok', 'devtest_dd')     |              0.60202  |           0.00382974 |              0.575571 |            0.0133973 |
+| ('dd', 'devtest_dd')     |              0.616162 |           0.0133624  |              0.594515 |            0.0224479 |
+
+|(trained on, evaluated on)|   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('ok', 'test_full')      |              0.54     |           0.0259808  |              0.52644  |            0.0622833 |
+| ('ok', 'test_dd')        |              0.595939 |           0.018161   |              0.541691 |            0.020998  |
+| ('full', 'test_full')    |              0.6      |           0.0165831  |              0.598651 |            0.0283954 |
+| ('dd', 'test_dd')        |              0.633503 |           0.0177302  |              0.607424 |            0.0285351 |
+
+In general, deduplicated evaluation datasets seem to outperform full evaluation datasets.
