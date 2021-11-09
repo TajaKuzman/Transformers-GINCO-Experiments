@@ -483,7 +483,13 @@ I had an idea to first train the models, save them and later evaluate them, but 
 | ('ok', 'test_dd')        |              0.595939 |           0.018161   |              0.541691 |            0.020998  |
 | ('ok', 'test_full')      |              0.54     |           0.0259808  |              0.52644  |            0.0622833 |
 
-
+(note: `ok`: only data where `keep`==True, `dd`: only data where `duplicate` != True, `full`: all data regardless of tags.)
 Or, with prettier formatting:
 
 ![](images/17_stats.png)
+
+Again we can see that setups `train: ok, eval: *_dd` prove a bit better than the rest of the models, trained on `ok`.
+
+The highest scores, however, can be found with the setups `train: dd, eval: *_dd`.
+
+We can also see a trend that inclusion of `dev` split seems to be detrimental to the models performance: except `train: ok, eval: *_dd` all of the setups show better performance when evaluated on test than when evaluated on dev, with devtest being in the middle.
