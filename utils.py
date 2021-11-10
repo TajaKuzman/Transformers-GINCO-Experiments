@@ -115,3 +115,15 @@ def plot_cm(y_true, y_pred,  save=False, title=None):
         plt.savefig(save)
     plt.show()
     return microF1, macroF1
+
+def read_record(filename: str) -> pd.DataFrame:
+    import json
+    import pandas as pd
+    pd.set_option("precision", 3)
+    with open(filename) as f:
+        content = json.load(f)
+    jsonlikecontent = dict()
+    for key in content[0].keys():
+        jsonlikecontent[key] = [i[key] for i in content]
+    df = pd.DataFrame(data=jsonlikecontent)
+    return df
