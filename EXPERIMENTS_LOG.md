@@ -684,7 +684,12 @@ Confusion matrices of a random classifier on test/dev evaluations:
 ![](images/19_test.png)
 ![](images/19_dev.png)
 
-To compare I also plotted two of the CM for models trained on deduplicated data with primary labels only:
+I also joined all the true labels and the predictions into one confusion matrix:
 
-![](images/17_test_sample_cm.png)
-![](images/17_dev_sample_cm.png)
+![](images/19_test_all_cm.png)
+![](images/19_dev_all_cm.png)
+
+To compare I also plotted two of the CM for _all_ models outputs where models were trained on deduplicated data with primary labels only:
+
+![](images/17_test_all_cm.png)
+![](images/17_dev_all_cm.png)
