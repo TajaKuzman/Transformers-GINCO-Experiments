@@ -639,7 +639,7 @@ I start preparing the Q2 experiments. Secondary labels will be added only on tra
 
 
 
-|trained on, evaluated on        |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|(trained on, evaluated on)      |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
 |:-------------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
 | ('dd', 'dev_dd')               |              0.598995 |           0.0130072  |              0.542702 |            0.0290347 |
 | ('dd', 'devtest_dd')           |              0.616162 |           0.0133624  |              0.594515 |            0.0224479 |
@@ -650,17 +650,17 @@ I start preparing the Q2 experiments. Secondary labels will be added only on tra
 
 If we compare the performance side by side for every evaluation setup, we get the following triplet of tables:
 
-|trained on, evaluated on        |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
-|:-------------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
-| ('dd', 'dev_dd')               |              0.598995 |           0.0130072  |              0.542702 |            0.0290347 |
-| ('secondary_dd', 'dev_dd')     |              0.628141 |           0.0132952  |              0.509099 |            0.0397219 |
+|(trained on, evaluated on)   |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:----------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('dd', 'dev_dd')            |              0.598995 |           0.0130072  |              0.542702 |            0.0290347 |
+| ('secondary_dd', 'dev_dd')  |              0.628141 |           0.0132952  |              0.509099 |            0.0397219 |
 
-|trained on, evaluated on        |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
-|:-------------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
-| ('dd', 'devtest_dd')           |              0.616162 |           0.0133624  |              0.594515 |            0.0224479 |
-| ('secondary_dd', 'devtest_dd') |              0.631313 |           0.00954456 |              0.54334  |            0.0182572 |
+|(trained on, evaluated on)     | ('microF1', 'mean') | ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:------------------------------|--------------------:|-------------------:|----------------------:|---------------------:|
+| ('dd', 'devtest_dd')          |            0.616162 |         0.0133624  |              0.594515 |            0.0224479 |
+| ('secondary_dd', 'devtest_dd')|            0.631313 |         0.00954456 |              0.54334  |            0.0182572 |
 
-|trained on, evaluated on        |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|(trained on, evaluated on)      |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
 |:-------------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
 | ('dd', 'test_dd')              |              0.633503 |           0.0177302  |              0.607424 |            0.0285351 |
 | ('secondary_dd', 'test_dd')    |              0.634518 |           0.0118271  |              0.557786 |            0.0273217 |
