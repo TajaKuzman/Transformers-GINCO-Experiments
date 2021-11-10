@@ -675,3 +675,8 @@ Again we can look at the data without looking at the evaluation split:
 Some observations:
 * Training on secondary labels seems to improve performance on dev split, not so much on test split.
 * In general inclusion of secondary labels improves micro-F1, but lowers macro-F1 scores.
+
+Confusion matrices of a random classifier on test/dev evaluations:
+
+![](images/19_test.png)
+![](images/19_dev.png)
