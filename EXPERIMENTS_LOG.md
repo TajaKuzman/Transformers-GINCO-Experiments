@@ -635,4 +635,43 @@ TO-DO:
 
 # Addendum 2021-11-09T15:25:08
 
-I start preparing the Q2 experiments. Secondary labels will be added only on train side. `dd` data will be used on all splits.
+I start preparing the Q2 experiments. Secondary labels will be added only on train side. `dd` data will be used on all splits. Afterward each training statistics were calculated and predictions were logged.
+
+
+
+|trained on, evaluated on        |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('dd', 'dev_dd')               |              0.598995 |           0.0130072  |              0.542702 |            0.0290347 |
+| ('dd', 'devtest_dd')           |              0.616162 |           0.0133624  |              0.594515 |            0.0224479 |
+| ('dd', 'test_dd')              |              0.633503 |           0.0177302  |              0.607424 |            0.0285351 |
+| ('secondary_dd', 'dev_dd')     |              0.628141 |           0.0132952  |              0.509099 |            0.0397219 |
+| ('secondary_dd', 'devtest_dd') |              0.631313 |           0.00954456 |              0.54334  |            0.0182572 |
+| ('secondary_dd', 'test_dd')    |              0.634518 |           0.0118271  |              0.557786 |            0.0273217 |
+
+If we compare the performance side by side for every evaluation setup, we get the following triplet of tables:
+
+|trained on, evaluated on        |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('dd', 'dev_dd')               |              0.598995 |           0.0130072  |              0.542702 |            0.0290347 |
+| ('secondary_dd', 'dev_dd')     |              0.628141 |           0.0132952  |              0.509099 |            0.0397219 |
+
+|trained on, evaluated on        |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('dd', 'devtest_dd')           |              0.616162 |           0.0133624  |              0.594515 |            0.0224479 |
+| ('secondary_dd', 'devtest_dd') |              0.631313 |           0.00954456 |              0.54334  |            0.0182572 |
+
+|trained on, evaluated on        |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| ('dd', 'test_dd')              |              0.633503 |           0.0177302  |              0.607424 |            0.0285351 |
+| ('secondary_dd', 'test_dd')    |              0.634518 |           0.0118271  |              0.557786 |            0.0273217 |
+
+Again we can look at the data without looking at the evaluation split:
+
+| train        |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:-------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| dd           |              0.61622  |            0.0200452 |              0.581547 |            0.0381523 |
+| secondary_dd |              0.631324 |            0.0116905 |              0.536742 |            0.0356639 |
+
+Some observations:
+* Training on secondary labels seems to improve performance on dev split, not so much on test split.
+* In general inclusion of secondary labels improves micro-F1, but lowers macro-F1 scores.
