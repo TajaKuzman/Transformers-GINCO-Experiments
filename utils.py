@@ -80,3 +80,38 @@ def eval_model(test_df, model):
             "y_pred": y_pred_enc.tolist()}
 
 
+
+def plot_cm(y_true, y_pred,  save=False, title=None):
+    from sklearn.metrics import confusion_matrix
+    from sklearn.metrics import f1_score
+    import matplotlib.pyplot as plt
+    labels = train_labels
+    plt.style.use(["science", "no-latex", ])
+    cm = confusion_matrix(y_true, y_pred, labels=labels, )
+    # print(cm)
+    plt.figure(figsize=(9, 9))
+    plt.imshow(cm, cmap="Oranges")
+    for (i, j), z in np.ndenumerate(cm):
+        plt.text(j, i, '{:d}'.format(z), ha='center', va='center')
+    classNames = labels
+    plt.ylabel('True label')
+    plt.xlabel('Predicted label')
+    tick_marks = np.arange(len(classNames))
+    plt.xticks(tick_marks, classNames, rotation=90)
+    plt.yticks(tick_marks, classNames)
+    microF1 = f1_score(y_true, y_pred, labels=labels, average ="micro")
+    macroF1 = f1_score(y_true, y_pred, labels=labels, average ="macro")
+
+    print(f"{microF1=:0.4}")
+    print(f"{macroF1=:0.4}")
+
+    metrics = f"{microF1=:0.4}, {macroF1=:0.4}"
+    if title:
+        plt.title(title +";\n" + metrics)
+    else:
+        plt.title(metrics)
+    plt.tight_layout()
+    if save:
+        plt.savefig(save)
+    plt.show()
+    return microF1, macroF1
