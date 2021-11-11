@@ -699,3 +699,28 @@ To compare I also plotted two of the CM for _all_ models outputs where models we
 # Addendum 2021-11-11T08:25:46
 
 For Q3 we want to know what effect increasing the train data has. For now I opt for only examining the effect on the setup that interests us the most, which is deduplicated data on train and evaluation. For now only `dev` split will be used alongside `train`, evaluation will be performed on `test`. What we could also do is switch the two around and train on `train+test` and evaluate on `dev`. 
+
+After 5 iterations the results can be summarised like so:
+
+| scenario    |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| train only  |              0.630365 |           0.0175576  |              0.593252 |            0.0280028 |
+| train + dev |              0.631472 |           0.00578769 |              0.60827  |            0.0185148 |
+
+It seems that it is _slightly_ better to train with additional data, but is it significantly better? Let's find out:
+
+When evaluating micro-F1 scores, MannWhitney p-value is 0.613, which is significantly too high for the improvenent to be significant.
+
+When evaluating macro-F1 scores, the same test returns p-value of 0.087, which is again too high for significance.
+
+Possible future actionables:
+* Expand the analysis to all setups: perhaps inclusion of dev data improves models that are trained and evaluated on full data?
+* Expand the analysis to Q2 and check if the performance of models trained on primary and secondary labels can be improved by additional training data.
+
+I also plotted cumulative confusion matrices as before. For training only on deduplicated `train` split it looks like this:
+
+![](images/20_train_all_cm.png)
+
+For models with extended training data (trained on deduplicated `train` and deduplicated `dev`) it looks like this:
+
+![](images/20_traindev_all_cm.png)
