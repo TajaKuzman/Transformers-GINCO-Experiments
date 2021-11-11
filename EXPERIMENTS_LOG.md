@@ -698,4 +698,4 @@ To compare I also plotted two of the CM for _all_ models outputs where models we
 
 # Addendum 2021-11-11T08:25:46
 
-For Q3 we want to know what effect increasing the train data has. For now I opt for only examining the effect on the setup that interests us the most, which is deduplicated data on train and evaluation. For now only `dev` split will be used alongside `train`, evaluation will be performed on `test`. What we could also do is switch the two around and train on `train+test` and evaluate on `dev`.
+For Q3 we want to know what effect increasing the train data has. For now I opt for only examining the effect on the setup that interests us the most, which is deduplicated data on train and evaluation. For now only `dev` split will be used alongside `train`, evaluation will be performed on `test`. What we could also do is switch the two around and train on `train+test` and evaluate on `dev`. 
