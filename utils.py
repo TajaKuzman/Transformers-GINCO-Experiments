@@ -40,7 +40,7 @@ def parse_fasttext_file(path: str, encode=True):
 
 
 
-def train_model(train_df, NUM_EPOCHS=30):
+def train_model(train_df, NUM_EPOCHS=30, num_labels=21):
     from simpletransformers.classification import ClassificationModel
     model_args = {
         "num_train_epochs": NUM_EPOCHS,
@@ -57,7 +57,7 @@ def train_model(train_df, NUM_EPOCHS=30):
 
     model = ClassificationModel(
         "camembert", "EMBEDDIA/sloberta",
-        num_labels = 21,
+        num_labels = num_labels,
         use_cuda = True,
         args = model_args
     )
@@ -127,3 +127,15 @@ def read_record(filename: str) -> pd.DataFrame:
         jsonlikecontent[key] = [i[key] for i in content]
     df = pd.DataFrame(data=jsonlikecontent)
     return df
+
+
+def downsample_second(numlabel):
+    stringlabel = NUM_TO_STR[numlabel]
+    second_original = {"Recipe":"Instruction", "Research Article":"Information/Explanation", "Review":"Opinion/Argumentation", "Promotion of Services":"Promotion", "Promotion of a Product":"Promotion", "Invitation":"Promotion"}
+
+    second = {f"__label__{k.replace(' ', '_')}": f"__label__{v.replace(' ', '_')}" for k, v in second_original.items()}
+
+
+    new_stringlabel = second.get(stringlabel, stringlabel)
+
+    return STR_TO_NUM[new_stringlabel]
