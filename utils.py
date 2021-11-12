@@ -83,11 +83,12 @@ def eval_model(test_df, model):
 
 
 
-def plot_cm(y_true, y_pred,  save=False, title=None):
+def plot_cm(y_true, y_pred,  save=False, title=None, labels=None):
     from sklearn.metrics import confusion_matrix
     from sklearn.metrics import f1_score
     import matplotlib.pyplot as plt
-    labels = train_labels
+    if not labels:
+        labels = train_labels
     plt.style.use(["science", "no-latex", ])
     cm = confusion_matrix(y_true, y_pred, labels=labels, )
     # print(cm)
@@ -140,10 +141,3 @@ def downsample_second(numlabel):
     new_stringlabel = second.get(stringlabel, stringlabel)
 
     return REDUCED_STR_TO_NUM[new_stringlabel]
-
-# second_original = {"Recipe":"Instruction", "Research Article":"Information/Explanation", "Review":"Opinion/Argumentation", "Promotion of Services":"Promotion", "Promotion of a Product":"Promotion", "Invitation":"Promotion", "Correspondence":"Other", "Prose":"Other", "Call":"Other"}
-
-# second = {f"__label__{k.replace(' ', '_')}": f"__label__{v.replace(' ', '_')}" for k, v in second_original.items()}
-
-# reduced_labels = [k for k in train_labels if k not in second.keys()]
-# print(reduced_labels)
