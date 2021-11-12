@@ -748,3 +748,9 @@ As we can see we achieved a significanty better performance as before. Confusion
 ![](images/21_train_all_cm.png)
 
 ![](images/21_dev_all_cm.png)
+
+
+
+If we combine the predictions on `dev` and `test` splits, we not surprisingly get an intermediate metrics and confusion matrix:
+
+![](images/21_devtest_all_cm.png)
