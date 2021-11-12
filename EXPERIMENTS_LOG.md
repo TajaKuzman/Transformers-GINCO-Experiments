@@ -724,3 +724,14 @@ I also plotted cumulative confusion matrices as before. For training only on ded
 For models with extended training data (trained on deduplicated `train` and deduplicated `dev`) it looks like this:
 
 ![](images/20_traindev_all_cm.png)
+
+# Addendum 2021-11-12T08:46:12
+
+As per Nikola's suggestion I inverted the problem of Q3 and instead of increasing the size of the training split I removed one third of it. This gives us three datapoints, with 40%, 60% and 80% of the total data being trained on.
+
+The resulting metrics were logged and after the experiment was completed, the following plot was prepared:
+
+![](images/20_effect_of_training_split_size.png)
+
+
+The experimentation on Q4 is still underway due to unforeseen CUDA errors.
