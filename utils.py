@@ -8,11 +8,13 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import f1_score
 
 train_labels = ['__label__Legal/Regulation', '__label__Opinionated_News', '__label__News/Reporting', '__label__Forum', '__label__Correspondence', '__label__Invitation', '__label__Instruction', '__label__Recipe', '__label__Opinion/Argumentation', '__label__Promotion_of_Services', '__label__Promotion', '__label__List_of_Summaries/Excerpts', '__label__Promotion_of_a_Product', '__label__Call', '__label__Review', '__label__Other', '__label__Information/Explanation', '__label__Interview', '__label__Prose', '__label__Research_Article', '__label__Announcement']
-
 STR_TO_NUM = {s: i for i, s in enumerate(train_labels)}
 NUM_TO_STR = {i: s for i, s in enumerate(train_labels)}
 
 
+reduced_labels = ['__label__Legal/Regulation', '__label__Opinionated_News', '__label__News/Reporting', '__label__Forum', '__label__Instruction', '__label__Opinion/Argumentation', '__label__Promotion', '__label__List_of_Summaries/Excerpts', '__label__Other', '__label__Information/Explanation', '__label__Interview', '__label__Announcement']
+REDUCED_STR_TO_NUM = {s: i for i, s in enumerate(reduced_labels)}
+REDUCED_NUM_TO_STR = {i: s for i, s in enumerate(reduced_labels)}
 def parse_fasttext_file(path: str, encode=True):
     """Reads fasttext formatted file and returns dataframe."""
     with open(path, "r") as f:
@@ -40,7 +42,7 @@ def parse_fasttext_file(path: str, encode=True):
 
 
 
-def train_model(train_df, NUM_EPOCHS=30, num_labels=21):
+def train_model(train_df, NUM_EPOCHS=30, num_labels=21, use_cuda=True, no_cache=True):
     from simpletransformers.classification import ClassificationModel
     model_args = {
         "num_train_epochs": NUM_EPOCHS,
@@ -48,7 +50,7 @@ def train_model(train_df, NUM_EPOCHS=30, num_labels=21):
         "overwrite_output_dir": True,
         "train_batch_size": 32,
         "no_save": True,
-        "no_cache": True,
+        "no_cache": no_cache,
         "overwrite_output_dir": True,
         "save_steps": -1,
         "max_seq_length": 512,
@@ -58,7 +60,7 @@ def train_model(train_df, NUM_EPOCHS=30, num_labels=21):
     model = ClassificationModel(
         "camembert", "EMBEDDIA/sloberta",
         num_labels = num_labels,
-        use_cuda = True,
+        use_cuda = use_cuda,
         args = model_args
     )
     model.train_model(train_df)
@@ -131,11 +133,17 @@ def read_record(filename: str) -> pd.DataFrame:
 
 def downsample_second(numlabel):
     stringlabel = NUM_TO_STR[numlabel]
-    second_original = {"Recipe":"Instruction", "Research Article":"Information/Explanation", "Review":"Opinion/Argumentation", "Promotion of Services":"Promotion", "Promotion of a Product":"Promotion", "Invitation":"Promotion"}
+    second_original = {"Recipe":"Instruction", "Research Article":"Information/Explanation", "Review":"Opinion/Argumentation", "Promotion of Services":"Promotion", "Promotion of a Product":"Promotion", "Invitation":"Promotion", "Correspondence":"Other", "Prose":"Other", "Call":"Other"}
 
     second = {f"__label__{k.replace(' ', '_')}": f"__label__{v.replace(' ', '_')}" for k, v in second_original.items()}
 
-
     new_stringlabel = second.get(stringlabel, stringlabel)
 
-    return STR_TO_NUM[new_stringlabel]
+    return REDUCED_STR_TO_NUM[new_stringlabel]
+
+# second_original = {"Recipe":"Instruction", "Research Article":"Information/Explanation", "Review":"Opinion/Argumentation", "Promotion of Services":"Promotion", "Promotion of a Product":"Promotion", "Invitation":"Promotion", "Correspondence":"Other", "Prose":"Other", "Call":"Other"}
+
+# second = {f"__label__{k.replace(' ', '_')}": f"__label__{v.replace(' ', '_')}" for k, v in second_original.items()}
+
+# reduced_labels = [k for k in train_labels if k not in second.keys()]
+# print(reduced_labels)
