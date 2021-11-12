@@ -734,4 +734,4 @@ The resulting metrics were logged and after the experiment was completed, the fo
 ![](images/20_effect_of_training_split_size.png)
 
 
-The experimentation on Q4 is still underway due to unforeseen CUDA errors.
+The experimentation on Q4 is still underway due to unforeseen CUDA errors. The errors have since been solved.
