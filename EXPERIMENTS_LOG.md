@@ -735,3 +735,16 @@ The resulting metrics were logged and after the experiment was completed, the fo
 
 
 The experimentation on Q4 is still underway due to unforeseen CUDA errors. The errors have since been solved.
+
+After training the model outputs have been cached and the analysis started. The metrics look like this:
+
+| eval                |   ('microF1', 'mean') |   ('microF1', 'std') |   ('macroF1', 'mean') |   ('macroF1', 'std') |
+|:--------------------|----------------------:|---------------------:|----------------------:|---------------------:|
+| downsampled_dev_dd  |              0.679397 |           0.00655196 |              0.668627 |            0.0202979 |
+| downsampled_test_dd |              0.696447 |           0.0126395  |              0.668278 |            0.0316177 |
+
+As we can see we achieved a significanty better performance as before. Confusion matrices look like this:
+
+![](images/21_train_all_cm.png)
+
+![](images/21_dev_all_cm.png)
