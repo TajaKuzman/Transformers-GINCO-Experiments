@@ -10,7 +10,8 @@ from sklearn.metrics import f1_score
 train_labels = ['__label__Legal/Regulation', '__label__Opinionated_News', '__label__News/Reporting', '__label__Forum', '__label__Correspondence', '__label__Invitation', '__label__Instruction', '__label__Recipe', '__label__Opinion/Argumentation', '__label__Promotion_of_Services', '__label__Promotion', '__label__List_of_Summaries/Excerpts', '__label__Promotion_of_a_Product', '__label__Call', '__label__Review', '__label__Other', '__label__Information/Explanation', '__label__Interview', '__label__Prose', '__label__Research_Article', '__label__Announcement']
 STR_TO_NUM = {s: i for i, s in enumerate(train_labels)}
 NUM_TO_STR = {i: s for i, s in enumerate(train_labels)}
-
+NUM_TO_STR_NO_PREFIX = {i: s[9:].replace("_", " ") for i, s in enumerate(train_labels)}
+train_labels_no_prefix = [s[9:].replace("_", " ") for s in train_labels]
 
 reduced_labels = ['__label__Legal/Regulation', '__label__Opinionated_News', '__label__News/Reporting', '__label__Forum', '__label__Instruction', '__label__Opinion/Argumentation', '__label__Promotion', '__label__List_of_Summaries/Excerpts', '__label__Other', '__label__Information/Explanation', '__label__Interview', '__label__Announcement']
 REDUCED_STR_TO_NUM = {s: i for i, s in enumerate(reduced_labels)}
@@ -141,3 +142,16 @@ def downsample_second(numlabel):
     new_stringlabel = second.get(stringlabel, stringlabel)
 
     return REDUCED_STR_TO_NUM[new_stringlabel]
+
+
+def to_label(l:list):
+    """To be applied on whole pandas series."""
+    to_return = list()
+    for i in l:
+        if type(i) == int:
+            to_return.append(NUM_TO_STR_NO_PREFIX[i])
+        elif type(i) == str:
+            to_return.append(i[9:].replace("_", " "))
+        else:
+            raise AttributeError(f"Got type {type(i)}")
+    return to_return
