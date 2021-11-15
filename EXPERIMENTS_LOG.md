@@ -754,3 +754,15 @@ As we can see we achieved a significanty better performance as before. Confusion
 If we combine the predictions on `dev` and `test` splits, we not surprisingly get an intermediate metrics and confusion matrix:
 
 ![](images/21_devtest_all_cm.png)
+
+# Addendum 2021-11-12T14:17:23
+
+TO DO:
+* Why does Legal/Regulation and Anouncement behave worse now than before downsampling labels?
+* Maybe plot the CM/3 due to the fact that we have trippled data
+* ~~Check that CM is plotted correctly (that it's not transposed)~~ It is not, imshow and matshow all plot the CM identically and the confusion matrix is calculated correctly. Maybe rewrite the whole 21 notebook?
+* Coming soon: Unsuitable data will be soon provided, use that and the current dataset to train a binary classifier (is a document suittable or not?). Explore which instances of our current dataset are labeled as unsuitable. Use Full datasets.
+* Prepare a framework also for per class F1 scores for reporting.
+* Work out a consistant and well documented p-value scoring. Single tailed is ok, but document.
+* Start thinking of a name for the dataset
+* * Genrizza? (pronounced Žarnica)
