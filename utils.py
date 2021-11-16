@@ -95,6 +95,7 @@ def plot_cm(y_true, y_pred,  save=False, title=None, labels=None):
         labels = train_labels
     plt.style.use(["science", "no-latex", ])
     cm = confusion_matrix(y_true, y_pred, labels=labels, )
+    cm = cm/3
     # print(cm)
     plt.figure(figsize=(9, 9))
     plt.imshow(cm, cmap="Oranges")
