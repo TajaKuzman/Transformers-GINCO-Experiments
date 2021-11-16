@@ -16,6 +16,9 @@ train_labels_no_prefix = [s[9:].replace("_", " ") for s in train_labels]
 reduced_labels = ['__label__Legal/Regulation', '__label__Opinionated_News', '__label__News/Reporting', '__label__Forum', '__label__Instruction', '__label__Opinion/Argumentation', '__label__Promotion', '__label__List_of_Summaries/Excerpts', '__label__Other', '__label__Information/Explanation', '__label__Interview', '__label__Announcement']
 REDUCED_STR_TO_NUM = {s: i for i, s in enumerate(reduced_labels)}
 REDUCED_NUM_TO_STR = {i: s for i, s in enumerate(reduced_labels)}
+REDUCED_NUM_TO_STR_NO_PREFIX = {i: s[9:].replace("_", " ") for i, s in enumerate(reduced_labels)}
+reduced_labels_no_prefix = [s[9:].replace("_", " ") for s in reduced_labels]
+
 def parse_fasttext_file(path: str, encode=True):
     """Reads fasttext formatted file and returns dataframe."""
     with open(path, "r") as f:
@@ -144,14 +147,23 @@ def downsample_second(numlabel):
     return REDUCED_STR_TO_NUM[new_stringlabel]
 
 
-def to_label(l:list):
-    """To be applied on whole pandas series."""
+def to_label(l:list, reduced=False) -> list:
+    """To be applied on whole pandas series.
+    Returns a prettified label list, regardless of input is a list of 
+    integers or a list of strings.
+    
+    If reduced labels are used, set reduced=True."""
     to_return = list()
     for i in l:
         if type(i) == int:
-            to_return.append(NUM_TO_STR_NO_PREFIX[i])
+            if reduced:
+                # stringlabel = REDUCED_NUM_TO_STR[i]
+                # to_return.append(stringlabel[9:].replace("_", " "))
+                to_return.append(REDUCED_NUM_TO_STR_NO_PREFIX[i])
+            else:
+                to_return.append(NUM_TO_STR_NO_PREFIX[i])
         elif type(i) == str:
             to_return.append(i[9:].replace("_", " "))
         else:
-            raise AttributeError(f"Got type {type(i)}")
+            raise AttributeError(f"Got type {type(i)} for input {i}")
     return to_return
