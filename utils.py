@@ -87,7 +87,8 @@ def eval_model(test_df, model):
 
 
 
-def plot_cm(y_true, y_pred,  save=False, title=None, labels=None):
+def plot_cm(y_true, y_pred,  save=False, title=None, labels=None, 
+            include_metrics=True, figsize=None):
     from sklearn.metrics import confusion_matrix
     from sklearn.metrics import f1_score
     import matplotlib.pyplot as plt
@@ -96,8 +97,11 @@ def plot_cm(y_true, y_pred,  save=False, title=None, labels=None):
     plt.style.use(["science", "no-latex", ])
     cm = confusion_matrix(y_true, y_pred, labels=labels, )
     cm = cm/3
+    cm = cm.astype(int)
     # print(cm)
-    plt.figure(figsize=(9, 9))
+    if figsize == None:
+        figsize = (9,9)
+    plt.figure(figsize=figsize)
     plt.imshow(cm, cmap="Oranges")
     for (i, j), z in np.ndenumerate(cm):
         plt.text(j, i, '{:d}'.format(z), ha='center', va='center')
@@ -113,9 +117,12 @@ def plot_cm(y_true, y_pred,  save=False, title=None, labels=None):
     print(f"{microF1=:0.4}")
     print(f"{macroF1=:0.4}")
 
-    metrics = f"{microF1=:0.4}, {macroF1=:0.4}"
+    metrics = f"{microF1=:0.4}, {macroF1=:0.4}" if include_metrics else ""
     if title:
-        plt.title(title +";\n" + metrics)
+        if include_metrics:
+            plt.title(title +";\n" + metrics)
+        else:
+            plt.title(title)
     else:
         plt.title(metrics)
     plt.tight_layout()
