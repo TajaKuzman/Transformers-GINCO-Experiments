@@ -175,3 +175,28 @@ def to_label(l:list, reduced=False) -> list:
         else:
             raise AttributeError(f"Got type {type(i)} for input {i}")
     return to_return
+
+
+def train_model_xlm_roberta(train_df, NUM_EPOCHS=30, num_labels=21, use_cuda=True, no_cache=True):
+    from simpletransformers.classification import ClassificationModel
+    model_args = {
+        "num_train_epochs": NUM_EPOCHS,
+        "learning_rate": 1e-5,
+        "overwrite_output_dir": True,
+        "train_batch_size": 32,
+        "no_save": True,
+        "no_cache": no_cache,
+        "overwrite_output_dir": True,
+        "save_steps": -1,
+        "max_seq_length": 512,
+        "silent": True
+    }
+
+    model = ClassificationModel(
+        "xlm-roberta", "xlm-roberta-base",
+        num_labels = num_labels,
+        use_cuda = use_cuda,
+        args = model_args
+    )
+    model.train_model(train_df)
+    return model
