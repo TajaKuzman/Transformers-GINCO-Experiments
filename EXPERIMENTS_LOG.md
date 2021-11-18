@@ -765,4 +765,24 @@ TO DO:
 * Prepare a framework also for per class F1 scores for reporting.
 * Work out a consistant and well documented p-value scoring. Single tailed is ok, but document.
 * Start thinking of a name for the dataset
-* * Genrizza? (pronounced Žarnica)
+* * Genrizza? (pronounced Žanrica)
+
+To do:
+* 4.3: compare also against
+* * fasttext with embeddings (CLARIN has slovenian embeddings here: https://www.clarin.si/repository/xmlui/handle/11356/1204 )
+* * xlm-roberta (same hyperparameters as Sloberta)
+* ✓ 4.4 Drop all crosseefferences to the caption of table 2. Bold all statistically significant values.
+* 4.5 Frequency should be first in the legend since it's the top bar. Split the labels on the y-axis so that data has more space.
+* * Move macro and micro F1 to a table so that the plot is less cluttered
+* 4.6: have a consistent number of runs so that the table in 4.6 is consistant with 4.4 and 4.3
+* 4.2 and 4.2: Write it.
+* 4.7 join the two confusion matrices in one figure, rename the confusing title (full label set -> original)
+* * When that is done, publish one confusion matrix for the runs that provided the metrics. Turn off the metrics on the plot, as they will have been reported a few times already. Title it as summary of N ru
+
+TO:DO:
+* Order the figure 2 by frequencies, only f1 on 60% of the data. Remove the micro and macro f1 from the figure.
+* ~~Reorder also the labels in the confusion matrices the same way (By descending frequency)~~ Taja will provide an ordering for the CMs for all and reduced labels.
+* Report the micro and macro F1 in a scatter plot, Y scale from 0 to 1
+* Write section 5 (Machine learning experiments)
+
+# Addendum 2021-11-18T07:40:32
