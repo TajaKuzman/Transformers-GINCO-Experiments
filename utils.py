@@ -19,6 +19,9 @@ REDUCED_NUM_TO_STR = {i: s for i, s in enumerate(reduced_labels)}
 REDUCED_NUM_TO_STR_NO_PREFIX = {i: s[9:].replace("_", " ") for i, s in enumerate(reduced_labels)}
 reduced_labels_no_prefix = [s[9:].replace("_", " ") for s in reduced_labels]
 
+
+list_of_categories_matrix = ['Information/Explanation','Research Article','Instruction','Recipe', 'Legal/Regulation','Call','Announcement','News/Reporting','Opinionated News','Opinion/Argumentation','Review','Promotion','Promotion of a Product','Promotion of Services','Invitation','Forum','Interview','Correspondence','Prose','List of Summaries/Excerpts','Other']
+list_of_categories_matrix_donwnsampled = ['Information/Explanation','Instruction','Legal/Regulation','Announcement','News/Reporting','Opinionated News','Opinion/Argumentation','Promotion','Forum','Interview','List of Summaries/Excerpts','Other']
 def parse_fasttext_file(path: str, encode=True):
     """Reads fasttext formatted file and returns dataframe."""
     with open(path, "r") as f:
@@ -93,7 +96,7 @@ def plot_cm(y_true, y_pred,  save=False, title=None, labels=None,
     from sklearn.metrics import f1_score
     import matplotlib.pyplot as plt
     if not labels:
-        labels = train_labels
+        labels = list_of_categories_matrix
     plt.style.use(["science", "no-latex", ])
     cm = confusion_matrix(y_true, y_pred, labels=labels, )
     cm = cm/3
@@ -200,3 +203,5 @@ def train_model_xlm_roberta(train_df, NUM_EPOCHS=30, num_labels=21, use_cuda=Tru
     )
     model.train_model(train_df)
     return model
+
+
