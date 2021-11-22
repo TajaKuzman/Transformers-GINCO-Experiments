@@ -768,21 +768,31 @@ TO DO:
 * * Genrizza? (pronounced Žanrica)
 
 To do:
-* 4.3: compare also against
-* * fasttext with embeddings (CLARIN has slovenian embeddings here: https://www.clarin.si/repository/xmlui/handle/11356/1204 )
-* * xlm-roberta (same hyperparameters as Sloberta)
+* ✓ 4.3: compare also against
+* * ✓fasttext with embeddings (CLARIN has slovenian embeddings here: https://www.clarin.si/repository/xmlui/handle/11356/1204 )
+* * ✓xlm-roberta (same hyperparameters as Sloberta)
 * ✓ 4.4 Drop all crosseefferences to the caption of table 2. Bold all statistically significant values.
-* 4.5 Frequency should be first in the legend since it's the top bar. Split the labels on the y-axis so that data has more space.
-* * Move macro and micro F1 to a table so that the plot is less cluttered
-* 4.6: have a consistent number of runs so that the table in 4.6 is consistant with 4.4 and 4.3
-* 4.2 and 4.2: Write it.
-* 4.7 join the two confusion matrices in one figure, rename the confusing title (full label set -> original)
-* * When that is done, publish one confusion matrix for the runs that provided the metrics. Turn off the metrics on the plot, as they will have been reported a few times already. Title it as summary of N ru
+* ✓ 4.5 Frequency should be first in the legend since it's the top bar. Split the labels on the y-axis so that data has more space.
+* * ✓ Move macro and micro F1 to a table so that the plot is less cluttered
+* ✓4.6: have a consistent number of runs so that the table in 4.6 is consistant with 4.4 and 4.3
+* ✓4.2 and 4.2: Write it.
+* ✓ 4.7 join the two confusion matrices in one figure, ✓rename the confusing title (full label set -> original)
+* * ✓ When that is done, publish one confusion matrix for the runs that provided the metrics. Turn off the metrics on the plot, as they will have been reported a few times already. Title it as summary of N ru
 
 TO:DO:
-* Order the figure 2 by frequencies, only f1 on 60% of the data. Remove the micro and macro f1 from the figure.
-* ~~Reorder also the labels in the confusion matrices the same way (By descending frequency)~~ Taja will provide an ordering for the CMs for all and reduced labels.
-* Report the micro and macro F1 in a scatter plot, Y scale from 0 to 1
-* Write section 5 (Machine learning experiments)
+* ✓ Order the figure 2 by frequencies, only f1 on 60% of the data. Remove the micro and macro f1 from the figure.
+* ~~Reorder also the labels in the confusion matrices the same way (By descending frequency)~~ Taja will provide an ordering for the CMs for all and reduced labels. ✓
+* ✓ Report the micro and macro F1 in a scatter plot, Y scale from 0 to 1
+* ✓ Write section 5 (Machine learning experiments)
+ 
 
-# Addendum 2021-11-18T07:40:32
+# Addendum 2021-11-22T08:22:49
+Finally managed to import word vectors to fasttext models, the results seem to be not much better than before. But they are a marginally better.
+
+What to ask at the meeting:
+* Are plots ok?
+* * Scatter plot from 0 to 1 is useless.
+* * Kept the 4 bars in the barh plot
+* Should anything be expanded/shortened?
+* Should technologies be stylized differently? Maybe texttt, textsc...?
+* What to do next? Suitables?
