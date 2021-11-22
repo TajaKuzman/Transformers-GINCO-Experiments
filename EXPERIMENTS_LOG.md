@@ -796,3 +796,10 @@ What to ask at the meeting:
 * Should anything be expanded/shortened?
 * Should technologies be stylized differently? Maybe texttt, textsc...?
 * What to do next? Suitables?
+
+
+TO DO: 
+clarify what fasttext + emb. is.
+~~prepare a table with per category F1 @ 60%.~~ just keep the code
+drop the 40 and 80 % f1
+suitable/nonsuitable: binary classification, split 60/40, log the primary labels of the suitable and unsuitable docs.
