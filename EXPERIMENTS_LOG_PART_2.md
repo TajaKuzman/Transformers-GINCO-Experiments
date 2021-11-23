@@ -100,3 +100,53 @@ Wrong predictions of all 15 runs have been analyzed by the following protocol:
 | Opinion/Argumentation      |                      2 |                    660 |                0.0030303  |
 
 The type of error can be inferred from the label. E.g., for label `Forum` the original instance was labeled as suitable and since it ended up in our table, the classifier misclassified it as nonsuitable.
+
+### Inverted question: which primaries do not get misclassified?
+
+Again a table was constructed:
+
+| primary                    |   not_misclassified_counts |   counts_in_test_split |   not_misclassification_ratio |
+|:---------------------------|---------------------------:|-----------------------:|------------------------------:|
+| Correspondence             |                         90 |                     90 |                      1        |
+| Promotion of Services      |                        195 |                    195 |                      1        |
+| Recipe                     |                         60 |                     60 |                      1        |
+| Research Article           |                         75 |                     75 |                      1        |
+| Call                       |                         30 |                     30 |                      1        |
+| Interview                  |                         30 |                     30 |                      1        |
+| Lyrical                    |                         15 |                     15 |                      1        |
+| Invitation                 |                        165 |                    165 |                      1        |
+| Other                      |                        195 |                    195 |                      1        |
+| Promotion                  |                        210 |                    210 |                      1        |
+| FAQ                        |                         15 |                     15 |                      1        |
+| Opinionated News           |                        525 |                    525 |                      1        |
+| Review                     |                         60 |                     60 |                      1        |
+| Opinion/Argumentation      |                        658 |                    660 |                      0.99697  |
+| News/Reporting             |                        626 |                    630 |                      0.993651 |
+| Information/Explanation    |                        684 |                    690 |                      0.991304 |
+| Legal/Regulation           |                        133 |                    135 |                      0.985185 |
+| Encoding Issues            |                         59 |                     60 |                      0.983333 |
+| List of Summaries/Excerpts |                        824 |                    840 |                      0.980952 |
+| Promotion of a Product     |                        733 |                    750 |                      0.977333 |
+| Announcement               |                        116 |                    120 |                      0.966667 |
+| Forum                      |                        352 |                    375 |                      0.938667 |
+| Instruction                |                        136 |                    150 |                      0.906667 |
+| Machine Translation        |                         59 |                    135 |                      0.437037 |
+| Non-textual                |                         55 |                    180 |                      0.305556 |
+| Too Short/Incoherent       |                         27 |                     90 |                      0.3      |
+| Not Slovene                |                         49 |                    165 |                      0.29697  |
+| Too Long                   |                          9 |                     60 |                      0.15     |
+
+## Summary:
+
+The nonsuitable primary labels from least successfully classified to most successfully classified: 
+
+| primary              |   misclassified_counts |   counts_in_test_split |   misclassification_ratio |
+|:---------------------|-----------------------:|-----------------------:|--------------------------:|
+| HTML Source Code     |                     30 |                     30 |                 1         |
+| Generated Text       |                     15 |                     15 |                 1         |
+| Too Long             |                     51 |                     60 |                 0.85      |
+| Not Slovene          |                    116 |                    165 |                 0.70303   |
+| Too Short/Incoherent |                     63 |                     90 |                 0.7       |
+| Non-textual          |                    125 |                    180 |                 0.694444  |
+| Machine Translation  |                     76 |                    135 |                 0.562963  |
+| Encoding Issues      |                      1 |                     60 |                 0.0166667 |
