@@ -47,3 +47,56 @@ Our classifier is statistically significantly better than guessing, but unfortun
 
 * Proper (wandb) or partial (only #epochs) hyperparameter optimization?
 * Repeating the training on dedup data? Repeat full grid searching? (i.e. {train_dedup, train_full} × {test_dedup, test_full})
+
+# Addendum 2021-11-23T12:48:55
+
+Wrong predictions of all 15 runs have been analyzed by the following protocol:
+* For every run, we look at what instances have been misclassified.
+* We log their primary label and the true and predicted value, although we only need the primary label, as the sets of suitable primary labels and unsuitable primary labels are disjoint.
+* The labels are counted. This produces the following table:
+
+| primary                    |   misclassified_counts |
+|:---------------------------|---------:|
+| Non-textual                |      125 |
+| Not Slovene                |      116 |
+| Machine Translation        |       76 |
+| Too Short/Incoherent       |       63 |
+| Too Long                   |       51 |
+| HTML Source Code           |       30 |
+| Forum                      |       23 |
+| Promotion of a Product     |       17 |
+| List of Summaries/Excerpts |       16 |
+| Generated Text             |       15 |
+| Instruction                |       14 |
+| Information/Explanation    |        6 |
+| News/Reporting             |        4 |
+| Announcement               |        4 |
+| Legal/Regulation           |        2 |
+| Opinion/Argumentation      |        2 |
+| Encoding Issues            |        1 |
+
+* This is not very informative as we do not know how frequent these labels are in the test split, so further analysis is needed.
+* For all of the test split we count the labels appearing in the first column of the table above. This number is then multiplied by 15 (because we had 15 runs and therefore have 15 times more misclassified instances, which should be accounted for.)
+* Numbers of misclassified counts are then divided by the number of counts in the test split. The final result looks like this:
+
+| primary                    |   misclassified_counts |   counts_in_test_split |   misclassification_ratio |
+|:---------------------------|-----------------------:|-----------------------:|--------------------------:|
+| HTML Source Code           |                     30 |                     30 |                1          |
+| Generated Text             |                     15 |                     15 |                1          |
+| Too Long                   |                     51 |                     60 |                0.85       |
+| Not Slovene                |                    116 |                    165 |                0.70303    |
+| Too Short/Incoherent       |                     63 |                     90 |                0.7        |
+| Non-textual                |                    125 |                    180 |                0.694444   |
+| Machine Translation        |                     76 |                    135 |                0.562963   |
+| Instruction                |                     14 |                    150 |                0.0933333  |
+| Forum                      |                     23 |                    375 |                0.0613333  |
+| Announcement               |                      4 |                    120 |                0.0333333  |
+| Promotion of a Product     |                     17 |                    750 |                0.0226667  |
+| List of Summaries/Excerpts |                     16 |                    840 |                0.0190476  |
+| Encoding Issues            |                      1 |                     60 |                0.0166667  |
+| Legal/Regulation           |                      2 |                    135 |                0.0148148  |
+| Information/Explanation    |                      6 |                    690 |                0.00869565 |
+| News/Reporting             |                      4 |                    630 |                0.00634921 |
+| Opinion/Argumentation      |                      2 |                    660 |                0.0030303  |
+
+The type of error can be inferred from the label. E.g., for label `Forum` the original instance was labeled as suitable and since it ended up in our table, the classifier misclassified it as nonsuitable.
