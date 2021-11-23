@@ -12,7 +12,9 @@ I note there are 1002 suitable documents and only 123 nonsuitable. Data has been
 
 The experiment is finished. 15 runs have been run on full datasets. If all the results are reshaped into a single matrix, the following figure is obtained:
 
-![](images/25_cumulative_CM.png)
+
+<img src="images/25_cumulative_CM.png" alt="plot" width="400"/>
+
 
 If f1_score is calculated across all runs and then averaged, we get **f1 = 0.954 +/- 0.0029**
 
