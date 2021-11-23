@@ -39,4 +39,4 @@ Note: `stratified` strategy is stochastic, so the results are different from the
 
 ## Verdict
 
-Our classifier is statistically significantly better than guessing, but unfortunately it is _only statistically_ significantly better than guessing.
+Our classifier is statistically significantly better than guessing, but unfortunately it is __only statistically significantly better than guessing__.
