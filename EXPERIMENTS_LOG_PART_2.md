@@ -42,3 +42,8 @@ Note: `stratified` strategy is stochastic, so the results are different from the
 ## Verdict
 
 Our classifier is statistically significantly better than guessing, but unfortunately it is __only statistically significantly better than guessing__.
+
+## Further possible actionables
+
+* Proper (wandb) or partial (only #epochs) hyperparameter optimization?
+* Repeating the training on dedup data? Repeat full grid searching? (i.e. {train_dedup, train_full} × {test_dedup, test_full})
