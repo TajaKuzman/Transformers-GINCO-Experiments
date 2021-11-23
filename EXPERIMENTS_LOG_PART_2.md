@@ -37,6 +37,6 @@ Dummy clf: strategy: 'most_frequent', 0.942 +/- 0.0
 Note: `stratified` strategy is stochastic, so the results are different from the results above, but they are within 1-sigma from eachother.
 
 
-### Verdict
+## Verdict
 
 Our classifier is statistically significantly better than guessing, but unfortunately it is _only statistically_ significantly better than guessing.
