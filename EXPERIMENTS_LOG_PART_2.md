@@ -149,4 +149,20 @@ The nonsuitable primary labels from least successfully classified to most succes
 | Too Short/Incoherent |                     63 |                     90 |                 0.7       |
 | Non-textual          |                    125 |                    180 |                 0.694444  |
 | Machine Translation  |                     76 |                    135 |                 0.562963  |
-| Encoding Issues      |                      1 |                     60 |                 0.0166667 |
+| Encoding Issues      |                      1 |                     60 |                 0.0166667 
+
+# Addendum 2021-11-24T12:32:46: Possible improvements to the paper
+
+To do:
+* With Taja work out the dataset structure:
+* * One DS for unsuitable, one DS for suitable (original labels, 25 labels, with my latest splits.)
+* After the dataset is published somewhere, put together a repo with demo code for training.
+
+
+
+Ideas for further experimentation: *on hold for now*
+* Randomly initialize Sloberta and XLM Roberta and then fine-tune to show that pretraining is not the driving factor behind the transformers behaviour
+* Take a checkpoint trained on another language and fine tune it
+
+
+Stylistic unification: now we have `dataset`, but also `label set`
