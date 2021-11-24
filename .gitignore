@@ -136,3 +136,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+fasttext_embeddings/embed.sl-lemma.ft.sg.vec
+fasttext_embeddings/embed.sl-lemma.ft.sg.vec.zip
+fasttext_embeddings/embed.sl-token.ft.sg.vec
+fasttext_embeddings/embed.sl-token.ft.sg.vec.zip
