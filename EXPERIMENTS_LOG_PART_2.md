@@ -15,8 +15,12 @@ The experiment is finished. 15 runs have been run on full datasets. If all the r
 
 <img src="images/25_cumulative_CM.png" alt="plot" width="300"/>
 
+# Addendum 2021-11-25T12:44:54
+
+The analysis below is wrong. Find out more in 
 
 If f1_score is calculated across all runs and then averaged, we get **f1 = 0.954 +/- 0.0029**
+
 
 ### Comparison with dummy classifier
 
@@ -153,6 +157,8 @@ The nonsuitable primary labels from least successfully classified to most succes
 
 # Addendum 2021-11-24T12:32:46: Possible improvements to the paper
 
+Stylistic unification: now we have `dataset`, but also `label set`?
+
 To do:
 * With Taja work out the dataset structure:
 * * One DS for unsuitable, one DS for suitable (original labels, 25 labels, with my latest splits.)
@@ -165,4 +171,22 @@ Ideas for further experimentation: *on hold for now*
 * Take a checkpoint trained on another language and fine tune it
 
 
-Stylistic unification: now we have `dataset`, but also `label set`
+
+
+
+
+# Taja and Peter's brainstorming on dataset publication
+
+* Originally formatted paragraphs.
+* CLARIN repo prerequisites: json, utf-8, zazipano
+* Add token count, sentence count? Ask Nikola.
+* Briefly check for missing fields, empty paragraph lists... (Don't forget to check )
+
+Fields:
+segmentation: suitable: train:dev:test as is, unsuitable: assign new split by label
+instead of `primary`, `secondary`, `tertiary`: `primary_level_1`, `primary_level_2`,... `secondary_level_1`, `secondary_level_2`... `tertiary_level_1`,...
+Add field `domain`, but leave URL in as well
+`split`: which split does the instance belong to.
+
+
+
