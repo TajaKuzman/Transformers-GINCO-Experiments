@@ -27,22 +27,22 @@ Documents in the `nonsuitable.json` file have the following fields:
 
 | field             | description                                                    | remarks                                                                                                            |
 |-------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| `id`                | document unique string id                                      |                                                                                                                    |
-| `url`               | url of the original website from which the text was scrapped   |                                                                                                                    |
+| `id`                | string, document unique string id                                      |                                                                                                                    |
+| `url`               | string, url of the original website from which the text was scrapped   |                                                                                                                    |
 | `crawled`           | string, crawl year                                             |                                                                                                                    |
 | `paragraphs`        | list of dictionaries, containing paragraphs and their metadata |                                                                                                                    |
-| `primary_level_1`   | human annotated primary label                                  | there was no downcasting for unsuitable dataset|
-| `secondary_level_1` | human annotated secondary label                                |                                                                                                                    |
-| `split`             | whether the document belongs to train, dev, or test split      | 60:20:20 split, stratified by primary_level_1|
-| `domain`            | domain from which the document was scrapped                    | parsed from `url` field                                                                                              |
+| `primary_level_1`   | string, human annotated primary label                                  | there was no downcasting for unsuitable dataset|
+| `secondary_level_1` | string, human annotated secondary label                                |                                                                                                                    |
+| `split`             | string, whether the document belongs to train, dev, or test split      | 60:20:20 split, stratified by primary_level_1|
+| `domain`            | string, domain from which the document was scrapped                    | parsed from `url` field                                                                                              |
 
 
 ## Paragraph structure
 
 Items of the list in `paragraphs` have the following fields:
 
-| field     | description                                                              | remarks                             |
-|-----------|--------------------------------------------------------------------------|-------------------------------------|
-| `text`      | paragraph text                                                           |                                     |
+| field     | description                                                                | remarks                             |
+|-----------|----------------------------------------------------------------------------|-------------------------------------|
+| `text`      | string, paragraph text                                                   |                                     |
 | `duplicate` | boolean, result of automated deduplication                               |                                     |
 | `keep`      | boolean, human annotated tag whether or not the paragraph should be kept | only present in suitable paragraphs |
