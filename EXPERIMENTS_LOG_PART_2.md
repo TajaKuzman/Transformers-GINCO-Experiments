@@ -183,7 +183,7 @@ Ideas for further experimentation: *on hold for now*
 * Briefly check for missing fields, empty paragraph lists... (Don't forget to check )
 
 Fields:
-segmentation: suitable: train:dev:test as is, unsuitable: assign new split by label
+segmentation: suitable: `train:dev:test` as is, unsuitable: assign new split by primary_level_2 only
 instead of `primary`, `secondary`, `tertiary`: `primary_level_1`, `primary_level_2`,... `secondary_level_1`, `secondary_level_2`... `tertiary_level_1`,...
 Add field `domain`, but leave URL in as well
 `split`: which split does the instance belong to.
@@ -201,4 +201,7 @@ Iffy secondary labels:
 * Promotion of a product -> ... Product
 
 
-A corrective measure has since been implemented in `26_dataset_creation.ipynb` and the dataset was constructed anew. 
+A corrective measure has since been implemented in `26_dataset_creation.ipynb` and the dataset was constructed anew.
+
+A new repo has been initiated for demo purposes. It loads the dataset from disc (to be improved upon after publication) and then trains a `simpletransformers` model. A brief evaluation part was added to illustrate the performance being approximately equat to what we describe in the paper. In the demo repo number of epochs was raised from 30 to 90 to account for loss of data after changing format (in fasttext format every instance appeared in 3 copies.)
+
