@@ -56,20 +56,38 @@ def parse_fasttext_file(path: str, encode=True):
     return pd.DataFrame(data={"text": texts, "labels": labels})
 
 
-def train_model(train_df, NUM_EPOCHS=30, num_labels=21, use_cuda=True, no_cache=True):
-    from simpletransformers.classification import ClassificationModel
-    model_args = {
-        "num_train_epochs": NUM_EPOCHS,
-        "learning_rate": 1e-5,
-        "overwrite_output_dir": True,
-        "train_batch_size": 32,
-        "no_save": True,
-        "no_cache": no_cache,
-        "overwrite_output_dir": True,
-        "save_steps": -1,
-        "max_seq_length": 512,
-        "silent": True
-    }
+def train_model(train_df, NUM_EPOCHS=30, num_labels=21, use_cuda=True, no_cache=True,
+                labels=None):
+    """Trains a simpletransformer model and returns it.
+
+    Args:
+        train_df (pandas.DataFrame): A DataFrame with columns ["text", "labels"].
+        NUM_EPOCHS (int, optional): Number of epochs. Defaults to 30.
+        num_labels (int, optional): Number of labels used. Defaults to 21.
+        use_cuda (bool, optional): Whether to use cuda. Defaults to True. Set False for easier debugging.
+        no_cache (bool, optional): Whether to use caching or not. Defaults to True.
+        labels (list(str), optional): If not None, use these labels to use string labels instead of numeric labels. 
+            Defaults to None. If set, num_labels is calculated automatically.
+
+    Returns:
+        simpletransformers.ClassificationModel: a trained model
+    """
+    from simpletransformers.classification import ClassificationModel, ClassificationArgs
+
+    model_args = ClassificationArgs()
+    model_args.num_train_epochs = NUM_EPOCHS
+    model_args.learning_rate = 1e-5
+    model_args.overwrite_output_dir = True
+    model_args.train_batch_size = 32
+    model_args.no_cache = no_cache
+    model_args.no_save = True
+    model_args.save_steps = -1
+    model_args.max_seq_length = 512
+    model_args.silent = True
+    if labels:
+        LABELS = list(LABELS)
+        model_args.labels_list = LABELS
+        num_labels = len(LABELS)
 
     model = ClassificationModel(
         "camembert", "EMBEDDIA/sloberta",
