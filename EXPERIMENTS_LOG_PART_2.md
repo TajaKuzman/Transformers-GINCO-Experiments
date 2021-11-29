@@ -190,3 +190,15 @@ Add field `domain`, but leave URL in as well
 
 
 
+# Addendum 2021-11-29T08:53:54
+
+Taja identified some secondary and tertiary labels that were input incorrectly.
+
+Iffy secondary labels:
+* Promotion of services -> ... Services
+* Opinionated news -> ... News
+* Research article -> ... Article
+* Promotion of a product -> ... Product
+
+
+A corrective measure has since been implemented in `26_dataset_creation.ipynb` and the dataset was constructed anew. 
