@@ -31,7 +31,15 @@ list_of_categories_matrix_donwnsampled = ['Information/Explanation', 'Instructio
 
 
 def parse_fasttext_file(path: str, encode=True):
-    """Reads fasttext formatted file and returns dataframe."""
+    """Reads fasttext formatted file and returns dataframe.
+
+    Args:
+        path (str): fasttext file to be parsed.
+        encode (bool, optional): Whether the labels should be encoded to integers. Defaults to True.
+
+    Returns:
+        pd.DataFrame: DF with columns `text` and `labels`.
+    """
     with open(path, "r") as f:
         content = f.readlines()
     pattern = "{label} {text}\n"
@@ -50,7 +58,6 @@ def parse_fasttext_file(path: str, encode=True):
             texts.append(rez["text"])
         else:
             pass
-            #print("error parsing line ", line)
     if encode:
         labels = [STR_TO_NUM[i] for i in labels]
     return pd.DataFrame(data={"text": texts, "labels": labels})
@@ -100,6 +107,15 @@ def train_model(train_df, NUM_EPOCHS=30, num_labels=21, use_cuda=True, no_cache=
 
 
 def eval_model(test_df, model):
+    """Evaluates trained model on test_df and returns metrics.
+
+    Args:
+        test_df (pd.DataFrame): dataframe with `text` and `labels` columns
+        model (simpletransformers.ClassificationModel): previously trained model to evaluate.
+
+    Returns:
+        results (dict): dictionary with fields `microF1`, `macroF1`, `y_true`, `y_pred`.
+    """
     y_true_enc = test_df.labels
     y_pred_enc = model.predict(test_df.text.tolist())[0]
 
@@ -117,6 +133,23 @@ def eval_model(test_df, model):
 
 def plot_cm(y_true, y_pred,  save=False, title=None, labels=None,
             include_metrics=True, figsize=None):
+    """Plots confusion matrix for y_true and y_pred. Can calculate
+    metrics and display them in the title.
+
+    Args:
+        y_true (list|np.array|pd.Series): true labels
+        y_pred (list|np.array|pd.Series): predicted labels
+        save (bool|str, optional): string, path to save a figure to, or bool (False) to not save. Defaults to False.
+        title ([None|str], optional): Title to put at the top of the figure. Defaults to None.
+        labels (list|np.array|pd.Series, optional): how to arrange labels. The list must contain all labels
+            that appear in y_true and y_pred. Defaults to None.
+        include_metrics (bool, optional): Whether the metrics should be displayed
+            under the title. Defaults to True.
+        figsize (tuple(int, int), optional): figure size. Defaults to None.
+
+    Returns:
+        microF1, macroF1: metrics.
+    """            
     from sklearn.metrics import confusion_matrix
     from sklearn.metrics import f1_score
     import matplotlib.pyplot as plt
@@ -161,6 +194,14 @@ def plot_cm(y_true, y_pred,  save=False, title=None, labels=None,
 
 
 def read_record(filename: str) -> pd.DataFrame:
+    """Reads a record file and returns a DataFrame.
+
+    Args:
+        filename (str): record filename
+
+    Returns:
+        pd.DataFrame: resulting dataframe
+    """
     import json
     import pandas as pd
     pd.set_option("precision", 3)
@@ -173,7 +214,15 @@ def read_record(filename: str) -> pd.DataFrame:
     return df
 
 
-def downsample_second(numlabel):
+def downsample_second(numlabel: int) -> int:
+    """Performs the downsampling based on the second downsampling.
+
+    Args:
+        numlabel (int): numerical label, original
+
+    Returns:
+        int: downsampled numerical label
+    """
     stringlabel = NUM_TO_STR[numlabel]
     second_original = {"Recipe": "Instruction", "Research Article": "Information/Explanation", "Review": "Opinion/Argumentation", "Promotion of Services": "Promotion",
                        "Promotion of a Product": "Promotion", "Invitation": "Promotion", "Correspondence": "Other", "Prose": "Other", "Call": "Other"}
@@ -187,17 +236,23 @@ def downsample_second(numlabel):
 
 
 def to_label(l: list, reduced=False) -> list:
-    """To be applied on whole pandas series.
-    Returns a prettified label list, regardless of input is a list of 
-    integers or a list of strings.
+    """Transform a series of strings or integers into original labels.
 
-    If reduced labels are used, set reduced=True."""
+    Args:
+        l (list): list or pandas.Series with either string or numeric labels.
+        reduced (bool, optional): if True, use reduced label set (12 labels). Defaults to False.
+
+    Raises:
+        AttributeError: there seems to be a weird input type
+
+    Returns:
+        list: list of labels with no prefix
+    """    
+    
     to_return = list()
     for i in l:
         if type(i) == int:
             if reduced:
-                # stringlabel = REDUCED_NUM_TO_STR[i]
-                # to_return.append(stringlabel[9:].replace("_", " "))
                 to_return.append(REDUCED_NUM_TO_STR_NO_PREFIX[i])
             else:
                 to_return.append(NUM_TO_STR_NO_PREFIX[i])
