@@ -205,3 +205,12 @@ A corrective measure has since been implemented in `26_dataset_creation.ipynb` a
 
 A new repo has been initiated for demo purposes. It loads the dataset from disc (to be improved upon after publication) and then trains a `simpletransformers` model. A brief evaluation part was added to illustrate the performance being approximately equat to what we describe in the paper. In the demo repo number of epochs was raised from 30 to 90 to account for loss of data after changing format (in fasttext format every instance appeared in 3 copies.)
 
+
+# Addendum 2021-11-30T11:03:29
+
+For publication to HuggingFace dataset hub some decisions will have to be made.
+
+* top level file structure will have to be `test.json`, `dev.json`, and `train.json`.
+* we have to decide if we want to publish also the nonsuitable documents.
+* what metadata to keep? minimal setup: `label` and `text`, e.g. primary_level_2 and joined paragraphs.
+* I feel there isn't much use in keeping the `paragraphs` structure as is. I suggest we deduplicate paragraphs and join them with the standard `<p/>` tag.
