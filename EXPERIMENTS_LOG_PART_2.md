@@ -195,10 +195,10 @@ Add field `domain`, but leave URL in as well
 Taja identified some secondary and tertiary labels that were input incorrectly.
 
 Iffy secondary labels:
-* Promotion of services -> ... Services
-* Opinionated news -> ... News
-* Research article -> ... Article
-* Promotion of a product -> ... Product
+* Promotion of **s**ervices -> ... Services
+* Opinionated **n**ews -> ... News
+* Research **a**rticle -> ... Article
+* Promotion of a **p**roduct -> ... Product
 
 
 A corrective measure has since been implemented in `26_dataset_creation.ipynb` and the dataset was constructed anew.
@@ -214,3 +214,8 @@ For publication to HuggingFace dataset hub some decisions will have to be made.
 * we have to decide if we want to publish also the nonsuitable documents.
 * what metadata to keep? minimal setup: `label` and `text`, e.g. primary_level_2 and joined paragraphs.
 * I feel there isn't much use in keeping the `paragraphs` structure as is. I suggest we deduplicate paragraphs and join them with the standard `<p/>` tag.
+
+
+# Addendum 2021-12-01T13:37:29
+
+CLARIN repo has README.txt, although it is actually a .md file. Can this be changed?
