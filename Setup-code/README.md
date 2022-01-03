@@ -2,11 +2,15 @@
 
 ## Setting-up the Transformers (SloBERTa)
 
-Desired baseline result (as achieved by Peter): SloBERTa micro F1 0.629, macro F1 0.575
+Desired baseline result (as achieved by Peter): SloBERTa micro F1 0.629, macro F1 0.575 -> achieved and outperformed with max_seq_length 300
 
 Questions for Peter:
 - issues with not loading the test data (the bar stops at 1%, however we get predictions for all examples - does this effect the results?) (zašteka, tudi če poženem Petrovo kodo na podlagi njegovih podatkov)
 - uporabim svoje podatke (dataframe iz zaključene GINCO json datoteke) ali rajši Petrove (3x ponovljeni primeri -> manj epoch)
+- učim na test+dev, glede na to, da dev ne bom uporabljala?
+- 300 max_seq_length (najboljši rezultat)? - problem bo, 
+1) če bo pri test+dev zaštekalo prej/bodo drugačni rezultati
+2) če bo pri drugih transformerjih zaštekalo prej - uporabim najvišjo št. epoch pri katerih ne zašteka pri nobenem ali rajši default just to be safe?
 
 Report:
 
@@ -26,7 +30,7 @@ Searching for the optimal max_seq_length (code from [2-SloBERTa-Initial-Setup.ip
 - 200: 'microF1': 0.563, 'macroF1': 0.479
 - 250: 'microF1': 0.584, 'macroF1': 0.488
 - 300: 'microF1': 0.665, 'macroF1': 0.595
-- 350:
+- 350: 'microF1': 0.604, 'macroF1': 0.556
 - 390: 'microF1': 0.599, 'macroF1': 0.531
 - from 400 onwards -> error
 
