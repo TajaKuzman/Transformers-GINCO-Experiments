@@ -40,3 +40,5 @@ model_args ={"overwrite_output_dir": True,
 `
 
 Each model will be ran 5 times to be able to analyse the statistical importance of the differences between them.
+
+Time required for the experiments: 36 hours of running the GPU.
