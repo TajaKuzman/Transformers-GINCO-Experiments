@@ -1,5 +1,7 @@
 ## The Results of the Transformer Comparison Based on Language
 
+### Max_seq_length = 300, Batches: 32
+
 1. SloBERTa:
 * 1st run: Macro f1: 0.531, Micro f1: 0.619
 * 2nd run: Macro f1: 0.592, Micro f1: 0.624
@@ -37,20 +39,46 @@
 * 4th run: Macro f1: 0.276, Micro f1: 0.33
 * 5th run: Macro f1: 0.23, Micro f1: 0.289
 
-## The Results of Transformer Comparison Based on Size
+### Max_seq_length = 128, batches = 21
 
-The training on XMLRoBERTa Large takes at least twice more time.
+1. SloBERTa
+* 1st run: Macro f1: 0.48, Micro f1: 0.553
+* 2nd run: Macro f1: 0.506, Micro f1: 0.574
+* 3rd run: Macro f1: 0.573, Micro f1: 0.574
+* 4th run: Macro f1: 0.565, Micro f1: 0.584
+* 5th run: Macro f1: 0.516, Micro f1: 0.563
 
-1. XMLRoBERTa Large:
+2. CroSloEngualBERT
+* 1st run: Macro f1: 0.389, Micro f1: 0.497
+* 2nd run: Macro f1: 0.426, Micro f1: 0.513
+* 3rd run: Macro f1: 0.441, Micro f1: 0.513
+* 4th run: Macro f1: 0.445, Micro f1: 0.518
+* 5th run: Macro f1: 0.441, Micro f1: 0.518
+
+3. XMLRoBERTa Large - The training on XMLRoBERTa Large takes at least twice more time.
 * 1st run: Macro f1: 0.6, Micro f1: 0.619
 * 2nd run: Macro f1: 0.589, Micro f1: 0.594
 * 3rd run: Macro f1: 0.54, Micro f1: 0.548
 * 4th run: Macro f1: 0.507, Micro f1: 0.579
 * 5th run: Macro f1: 0.546, Micro f1: 0.553
 
-2. XMLRoBERTa Base:
+4. XMLRoBERTa Base:
 * 1st run: Macro f1: 0.41, Micro f1: 0.477
 * 2nd run: Macro f1: 0.438, Micro f1: 0.513
 * 3rd run: Macro f1: 0.458, Micro f1: 0.503
 * 4th run: Macro f1: 0.448, Micro f1: 0.497
 * 5th run: Macro f1: 0.393, Micro f1: 0.442
+
+5. BERTić:
+* 1st run: Macro f1: 0.378, Micro f1: 0.467
+* 2nd run: Macro f1: 0.391, Micro f1: 0.462
+* 3rd run: Macro f1: 0.399, Micro f1: 0.497
+* 4th run: Macro f1: 0.393, Micro f1: 0.472
+* 5th run: Macro f1: 0.374, Micro f1: 0.462
+
+6. BERT:
+* 1st run: Macro f1: 0.2, Micro f1: 0.284
+* 2nd run: Macro f1: 0.182, Micro f1: 0.249
+* 3rd run: Macro f1: 0.193, Micro f1: 0.249
+* 4th run: Macro f1: 0.22, Micro f1: 0.239
+* 5th run: Macro f1: 0.219, Micro f1: 0.259

@@ -62,6 +62,8 @@ Each model was ran 5 times to be able to analyse the statistical importance of t
 
 Time required for the experiments: 54 hours of running the GPU.
 
+Additionally, I decided to perform the training on all models, compared based on the language, also on the hyperparameters used in comparison based on the size, that is the train batch size reduced to 21 and the default max_seq_length  (128) tokens.
+
 ## Results
 
 Materials for analysing results are located in the *results* folder (the code and a json file with the F1 scores, and lists of true and predicted labels for each run), and confusion matrices are located in the *plots* folder.
