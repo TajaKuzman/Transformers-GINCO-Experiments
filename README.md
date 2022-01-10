@@ -49,4 +49,8 @@ Each model was ran 5 times to be able to analyse the statistical importance of t
 
 ## Results
 
-Materials for analysing results are located in the *results* folder (the code and a json file with the F1 scores, and lists of true and predicted labels for each run), and confusion matrices and scatterplots are located in the *plots* folder.
+Materials for analysing results are located in the *results* folder:
+* the code for creating tables, plots, confusion matrices and calculating statistical significance: [*Analysing_results.ipynb*](https://github.com/TajaKuzman/Transformers-GINCO-Experiments/blob/main/results/Analysing_results.ipynb)
+* JSON files with the F1 scores, and lists of true and predicted labels for each run
+
+Confusion matrices and scatterplots are located in the *plots* folder.
