@@ -57,9 +57,9 @@ Confusion matrices and scatterplots are located in the *plots* folder.
 
 Main results:
 
-1. Comparison of base-sized Transformers:
+1. Comparison of base-sized Transformers (based on F1 scores):
 <img style="width:100%" src="plots\language_impact_scatterplot.png">
 
-2. Comparison of base-sized and large-sized XLM-RoBERTa:
+2. Comparison of base-sized and large-sized XLM-RoBERTa (based on F1 scores):
 
 <img style="width:100%" src="plots\size_scatterplot.png">
