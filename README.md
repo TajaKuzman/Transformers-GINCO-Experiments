@@ -54,3 +54,12 @@ Materials for analysing results are located in the *results* folder:
 * JSON files with the F1 scores, and lists of true and predicted labels for each run
 
 Confusion matrices and scatterplots are located in the *plots* folder.
+
+Main results:
+
+1. Comparison of base-sized Transformers:
+<img style="width:100%" src="plots\language_impact_scatterplot.png">
+
+2. Comparison of base-sized and large-sized XLM-RoBERTa:
+
+<img style="width:100%" src="plots\size_scatterplot.png">
